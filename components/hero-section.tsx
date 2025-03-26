@@ -26,7 +26,10 @@ export default function HeroSection({
 
   if (!mounted)
     return (
-      <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-b from-[#CED6BF] to-[#94a37e]">
+      <div
+        className="flex w-screen items-center justify-center bg-gradient-to-b from-[#CED6BF] to-[#94a37e]"
+        style={{ height: '100dvh' }}
+      >
         <motion.div
           className="h-12 w-12 rounded-full border-4 border-t-4 border-t-[#273226] border-[#94a37e]"
           animate={{ rotate: 360 }}
@@ -36,7 +39,10 @@ export default function HeroSection({
     )
 
   return (
-    <section className="relative h-screen w-screen overflow-hidden snap-center snap-always">
+    <section
+      className="relative w-screen overflow-hidden snap-center snap-always"
+      style={{ height: '100dvh' }}
+    >
       <AnimatePresence>
         {!opened && (
           <motion.div

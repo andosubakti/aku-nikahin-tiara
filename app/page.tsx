@@ -13,7 +13,10 @@ export default function Home() {
   const [isOpened, setIsOpened] = useState(false)
 
   return (
-    <main className="relative h-screen snap-y snap-mandatory overflow-scroll scroll-smooth bg-[#CED6BF]">
+    <main
+      className="relative snap-y snap-mandatory overflow-scroll scroll-smooth bg-[#CED6BF]"
+      style={{ height: '100dvh' }}
+    >
       <FloatingElements />
       <HeroSection setIsOpened={setIsOpened} />
       <BackgroundMusic
@@ -41,7 +44,8 @@ export default function Home() {
         <>
           <section
             id="gallery"
-            className="h-screen w-screen relative snap-center snap-always"
+            className="w-screen relative snap-center snap-always"
+            style={{ height: '100dvh' }}
           >
             <div className="absolute top-[24px] z-[9] w-full">
               <h2 className="mb-8 text-center font-serif text-lg italic font-medium text-[#335A4A]">
