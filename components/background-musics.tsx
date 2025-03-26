@@ -126,7 +126,7 @@ export default function BackgroundMusic({ isActive, playlist }: Props) {
         loop={false}
         className="hidden"
       >
-        <source src={currentTrack.src} type="audio/mp4" />
+        <source src={currentTrack.src} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
 
