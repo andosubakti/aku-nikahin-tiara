@@ -17,25 +17,25 @@ const stories = [
   {
     id: 0,
     title: 'Awal Mula',
-    thumbnail: '/intro/intro-cover.jpg',
+    thumbnail: '/Intro/intro-cover.jpg',
     images: [
       {
-        src: '/intro/intro-1.png',
+        src: '/Intro/intro-1.png',
         alt: 'Our first date at the café',
         caption: 'Where it all began',
       },
       {
-        src: '/intro/intro-2.png',
+        src: '/Intro/intro-2.png',
         alt: 'Our first date at the café',
         caption: 'Where it all began',
       },
       {
-        src: '/intro/intro-3.png',
+        src: '/Intro/intro-3.png',
         alt: 'Our first date at the café',
         caption: 'Where it all began',
       },
       {
-        src: '/intro/intro-4.png',
+        src: '/Intro/intro-4.png',
         alt: 'Our first date at the café',
         caption: 'Where it all began',
       },
