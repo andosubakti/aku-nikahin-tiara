@@ -6,6 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import CoverImage from '@/assets/cover.jpg'
 import DetailImage from '@/assets/details.jpg'
 import { Button } from '@/components/ui/button'
+import { useSearchParams } from 'next/navigation'
+import { capitalizeWords } from '@/lib/utils'
+import { ChevronDown } from 'lucide-react'
 
 export default function HeroSection({
   setIsOpened,
@@ -14,9 +17,13 @@ export default function HeroSection({
 }) {
   const [mounted, setMounted] = useState(false)
   const [opened, setOpened] = useState(false)
+  const searchParams = useSearchParams()
+  const [name, setName] = useState('')
 
   useEffect(() => {
     setMounted(true)
+    const to = searchParams.get('to')
+    setName(capitalizeWords(to || ''))
   }, [])
 
   const handleOpen = () => {
@@ -52,6 +59,9 @@ export default function HeroSection({
             transition={{ duration: 1 }}
             className="absolute inset-0"
           >
+            <div className="absolute top-0 left-0 z-[9] text-gray-700 p-2">
+              {name ? `Yth. ${name}` : ''}
+            </div>
             <Image src={CoverImage} fill alt="cover-img" />
             <motion.div
               animate={{ y: [0, -10, 0] }}
@@ -74,6 +84,38 @@ export default function HeroSection({
             className="absolute inset-0"
           >
             <Image src={DetailImage} fill alt="image-2" />
+            {/* Panah Scroll */}
+            <motion.button
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
+              onClick={() => {
+                const target = document.getElementById('maps')
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+            >
+              {/* Icon bulat */}
+              <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
+                <ChevronDown className="w-6 h-6 text-[#335A4A]" />
+              </div>
+
+              {/* Label teks */}
+              <span
+                className="text-base font-semibold text-[#335A4A] tracking-wide"
+                style={{
+                  textShadow: `
+                    -1px -1px 0 #fff,
+                    1px -1px 0 #fff,
+                    -1px 1px 0 #fff,
+                    1px 1px 0 #fff
+                  `,
+                }}
+              >
+                Lihat Lokasi
+              </span>
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
