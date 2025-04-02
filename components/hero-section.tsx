@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import CoverImage from '@/assets/cover.jpg'
 import DetailImage from '@/assets/details.jpg'
 import { Button } from '@/components/ui/button'
-import { useSearchParams } from 'next/navigation'
 import { capitalizeWords } from '@/lib/utils'
 import { ChevronDown } from 'lucide-react'
 
@@ -17,12 +16,12 @@ export default function HeroSection({
 }) {
   const [mounted, setMounted] = useState(false)
   const [opened, setOpened] = useState(false)
-  const searchParams = useSearchParams()
   const [name, setName] = useState('')
 
   useEffect(() => {
     setMounted(true)
-    const to = searchParams.get('to')
+    const params = new URLSearchParams(window.location.search)
+    const to = params.get('to')
     setName(capitalizeWords(to || ''))
   }, [])
 
