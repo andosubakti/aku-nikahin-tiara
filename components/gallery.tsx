@@ -394,6 +394,90 @@ const stories = [
       },
     ],
   },
+  {
+    id: 10,
+    title: '2023',
+    thumbnail: '/2023/2023-cover.jpg',
+    images: [
+      {
+        src: '/2023/2023-1.jpg',
+        alt: 'Our first date at the café',
+        caption: 'Where it all began',
+      },
+      {
+        src: '/2023/2023-2.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+      {
+        src: '/2023/2023-3.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2023/2023-4.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2023/2023-5.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+      {
+        src: '/2023/2023-6.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2023/2023-8.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2023/2023-cover.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: '2024',
+    thumbnail: '/2024/2024-cover.jpg',
+    images: [
+      {
+        src: '/2024/2024-1.jpg',
+        alt: 'Our first date at the café',
+        caption: 'Where it all began',
+      },
+      {
+        src: '/2024/2024-2.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+      {
+        src: '/2024/2024-3.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2024/2024-4.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2024/2024-5.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+      {
+        src: '/2024/2024-cover.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+    ],
+  },
 ]
 
 export default function Gallery() {
