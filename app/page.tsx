@@ -45,13 +45,82 @@ export default function Home() {
       {isOpened && (
         <>
           <section
+            id="thanks"
+            className="w-screen relative snap-center snap-always flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#94a37e] to-gray-300"
+            style={{ height: '100dvh' }}
+          >
+            <h2 className="mb-8 text-center font-serif text-lg italic font-medium text-[#335A4A]">
+              Keluarga Besar Bapak Jatmiko dan Bapak Selamet Romadoni
+            </h2>
+            {/* Kontainer utama */}
+            <div className="max-w-md w-full rounded-2xl shadow-lg bg-white overflow-hidden z-10">
+              <div className="w-full h-48 relative">
+                <Image
+                  src="/keluarga.jpeg"
+                  fill
+                  alt="keluarga"
+                  className="absolute object-fill object-center z-0"
+                />
+              </div>
+
+              {/* Deskripsi dan Tombol */}
+              <div className="p-4 flex flex-col items-center">
+                <div className="flex flex-col items-center text-center">
+                  <p className="text-sm text-gray-600 mb-4">
+                    Mengucapkan terima kasih banyak atas kehadiran dan doa restu
+                    Bapak/Ibu.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Background map image */}
+            {/* <Image
+              src="/map.jpeg"
+              fill
+              alt="bg-map"
+              className="absolute object-cover object-center z-0"
+            /> */}
+
+            {/* Panah Scroll */}
+            <motion.button
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
+              onClick={() => {
+                const target = document.getElementById('maps')
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+            >
+              {/* Icon bulat */}
+              <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
+                <ChevronDown className="w-6 h-6 text-[#335A4A]" />
+              </div>
+
+              {/* Label teks */}
+              <span
+                className="text-base font-semibold text-[#335A4A] tracking-wide"
+                style={{
+                  textShadow: `
+                  -1px -1px 0 #fff,
+                  1px -1px 0 #fff,
+                  -1px 1px 0 #fff,
+                  1px 1px 0 #fff
+                `,
+                }}
+              >
+                Lihat Lokasi
+              </span>
+            </motion.button>
+          </section>
+
+          <section
             id="maps"
             className="w-screen relative snap-center snap-always flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#CED6BF] to-[#94a37e]"
             style={{ height: '100dvh' }}
           >
-            <h2 className="mb-8 text-center font-serif text-lg italic font-medium text-[#335A4A]">
-              Alamat/lokasi
-            </h2>
             {/* Kontainer utama */}
             <div className="max-w-md w-full rounded-2xl shadow-lg bg-white overflow-hidden z-10">
               {/* Iframe Peta */}
@@ -92,87 +161,12 @@ export default function Home() {
             </div>
 
             {/* Background map image */}
-            {/* <Image
+            <Image
               src="/map.jpeg"
               fill
               alt="bg-map"
               className="absolute object-cover object-center z-0"
-            /> */}
-
-            {/* Panah Scroll */}
-            <motion.button
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
-              onClick={() => {
-                const target = document.getElementById('thanks')
-                if (target) {
-                  target.scrollIntoView({ behavior: 'smooth' })
-                }
-              }}
-            >
-              {/* Icon bulat */}
-              <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
-                <ChevronDown className="w-6 h-6 text-[#335A4A]" />
-              </div>
-
-              {/* Label teks */}
-              <span
-                className="text-base font-semibold text-[#335A4A] tracking-wide"
-                style={{
-                  textShadow: `
-                  -1px -1px 0 #fff,
-                  1px -1px 0 #fff,
-                  -1px 1px 0 #fff,
-                  1px 1px 0 #fff
-                `,
-                }}
-              >
-                Special Thanks
-              </span>
-            </motion.button>
-          </section>
-
-          <section
-            id="thanks"
-            className="w-screen relative snap-center snap-always flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#94a37e] to-gray-300"
-            style={{ height: '100dvh' }}
-          >
-            <h2 className="mb-8 text-center font-serif text-lg italic font-medium text-[#335A4A]">
-              Keluarga Besar Bapak Jatmiko dan Bapak Selamet Romadoni
-            </h2>
-            {/* Kontainer utama */}
-            <div className="max-w-md w-full rounded-2xl shadow-lg bg-white overflow-hidden z-10">
-              <div className="w-full h-48 relative">
-                <Image
-                  src="/keluarga.jpeg"
-                  fill
-                  alt="keluarga"
-                  className="absolute object-cover object-center z-0"
-                />
-              </div>
-
-              {/* Deskripsi dan Tombol */}
-              <div className="p-4 flex flex-col items-center">
-                <div className="flex flex-col items-center text-center">
-                  {/* <h2 className="text-xl font-semibold mb-2">
-                    Kami
-                  </h2> */}
-                  <p className="text-sm text-gray-600 mb-4">
-                    Mengucapkan terima kasih banyak atas kehadiran dan doa restu
-                    Bapak/Ibu.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Background map image */}
-            {/* <Image
-              src="/map.jpeg"
-              fill
-              alt="bg-map"
-              className="absolute object-cover object-center z-0"
-            /> */}
+            />
 
             {/* Panah Scroll */}
             <motion.button

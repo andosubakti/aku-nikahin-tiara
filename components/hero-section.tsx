@@ -89,7 +89,7 @@ export default function HeroSection({
               transition={{ duration: 1.5, repeat: Infinity }}
               className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
               onClick={() => {
-                const target = document.getElementById('maps')
+                const target = document.getElementById('thanks')
                 if (target) {
                   target.scrollIntoView({ behavior: 'smooth' })
                 }
@@ -112,7 +112,7 @@ export default function HeroSection({
                   `,
                 }}
               >
-                Lihat Lokasi
+                Special Thanks
               </span>
             </motion.button>
           </motion.div>
