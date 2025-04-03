@@ -56,10 +56,10 @@ export default function Home() {
             <div className="max-w-md w-full rounded-2xl shadow-lg bg-white overflow-hidden z-10">
               <div className="w-full h-48 relative">
                 <Image
-                  src="/keluarga.jpeg"
+                  src="/keluarga.jpg"
                   fill
                   alt="keluarga"
-                  className="absolute object-fill object-center z-0"
+                  className="absolute object-cover object-center z-0"
                 />
               </div>
 
@@ -67,8 +67,9 @@ export default function Home() {
               <div className="p-4 flex flex-col items-center">
                 <div className="flex flex-col items-center text-center">
                   <p className="text-sm text-gray-600 mb-4">
-                    Mengucapkan terima kasih banyak atas kehadiran dan doa restu
-                    Bapak/Ibu.
+                    Dengan penuh rasa syukur dan hormat, kami mengucapkan terima
+                    kasih yang sebesar-besarnya atas kehadiran serta doa restu
+                    Bapak/Ibu yang telah menjadi bagian dari momen bahagia kami.
                   </p>
                 </div>
               </div>
