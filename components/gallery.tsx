@@ -527,9 +527,9 @@ export default function Gallery() {
   }
 
   const handleNextStory = () => {
+    setActiveImage(0)
     if (activeStory !== null && activeStory < stories.length - 1) {
       setActiveStory((prevState) => Number(prevState) + 1)
-      setActiveImage(0)
     } else if (activeStory !== null) {
       setActiveStory(null)
     }
@@ -661,7 +661,7 @@ export default function Gallery() {
           <div className="absolute bottom-24 left-0 w-full px-4 text-center">
             <div className="rounded-lg bg-black/30 p-3 backdrop-blur-sm">
               <p className="text-sm text-white/80">
-                {stories[activeStory].images[activeImage].caption}
+                {stories[activeStory].images[activeImage]?.caption}
               </p>
             </div>
           </div>
