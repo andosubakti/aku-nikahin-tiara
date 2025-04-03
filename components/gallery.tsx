@@ -348,12 +348,22 @@ const stories = [
         caption: 'The perfect ending to a perfect day',
       },
       {
+        src: '/2022/2022-4.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
         src: '/2022/2022-5.jpg',
         alt: 'Walking in the park after coffee',
         caption: 'Our first walk together',
       },
       {
         src: '/2022/2022-6.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2022/2022-7.jpg',
         alt: 'Sunset on our first date',
         caption: 'The perfect ending to a perfect day',
       },
@@ -472,7 +482,89 @@ const stories = [
         caption: 'Our first walk together',
       },
       {
+        src: '/2024/2024-6.jpeg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+      {
         src: '/2024/2024-cover.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+    ],
+  },
+  {
+    id: 12,
+    title: '2025',
+    thumbnail: '/2025/2025-cover.jpg',
+    images: [
+      {
+        src: '/2025/2025-1.jpg',
+        alt: 'Our first date at the café',
+        caption: 'Where it all began',
+      },
+      {
+        src: '/2025/2025-2.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+      {
+        src: '/2025/2025-3.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-4.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-5.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
+      },
+      {
+        src: '/2025/2025-6.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-7.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-8.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-9.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-10.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-11.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-12.jpeg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-13.jpeg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2025/2025-cover.jpg',
         alt: 'Walking in the park after coffee',
         caption: 'Our first walk together',
       },
