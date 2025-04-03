@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
+import { Pause, Play, SkipForward, SkipBack } from 'lucide-react'
 
 type Props = {
   isActive: boolean
@@ -70,6 +71,12 @@ export default function BackgroundMusic({ isActive, playlist }: Props) {
 
   const selectTrack = (index: number) => {
     setCurrentTrackIndex(index)
+  }
+
+  const prevTrack = () => {
+    setCurrentTrackIndex((prev) =>
+      prev - 1 >= 0 ? prev - 1 : playlist.length - 1,
+    )
   }
 
   // ✅ Close player when clicking outside
@@ -182,18 +189,28 @@ export default function BackgroundMusic({ isActive, playlist }: Props) {
                 </div>
 
                 {/* Controls */}
-                <div className="flex justify-between mb-4">
+                <div className="flex justify-center gap-4 mb-4">
+                  <button
+                    onClick={prevTrack}
+                    className="rounded border border-gray-600 px-4 py-1 text-sm font-medium hover:bg-gray-800 transition"
+                  >
+                    <SkipBack className="w-5 h-5" />
+                  </button>
                   <button
                     onClick={togglePlay}
                     className="rounded bg-emerald-600 px-4 py-1 text-sm font-medium hover:bg-emerald-700 transition"
                   >
-                    {isPlaying ? 'Pause' : 'Play'}
+                    {isPlaying ? (
+                      <Pause className="w-5 h-5" />
+                    ) : (
+                      <Play className="w-5 h-5" />
+                    )}
                   </button>
                   <button
                     onClick={nextTrack}
                     className="rounded border border-gray-600 px-4 py-1 text-sm font-medium hover:bg-gray-800 transition"
                   >
-                    Next
+                    <SkipForward className="w-5 h-5" />
                   </button>
                 </div>
 

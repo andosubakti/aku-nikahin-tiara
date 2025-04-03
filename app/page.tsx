@@ -25,19 +25,34 @@ export default function Home() {
         isActive={isOpened}
         playlist={[
           {
+            title: 'Grup Besar Kecil - Samuel & Samia',
+            src: '/samuel_dan_samia.mp3',
+            cover: '/samuel_samia_cover.png',
+          },
+          {
             title: 'The Adams - Timur',
             src: '/timur.mp3',
-            cover: '/2014/2014-cover.jpg',
+            cover: '/timur_cover.jpg',
+          },
+          {
+            title: 'Sheila on 7 - Memori Baik',
+            src: '/memori_baik.mp3',
+            cover: '/memori_baik_cover.jpeg',
+          },
+          {
+            title: 'Kabar Burung - Kamu Rahasia',
+            src: '/kamu_rahasia.mp3',
+            cover: '/kamu_rahasia_cover.jpg',
           },
           {
             title: 'Ungu feat. Andien - Saat Bahagia',
             src: '/saat_bahagia.mp3',
-            cover: '/2015/2015-cover.jpg',
+            cover: '/saat_bahagia_cover.jpeg',
           },
           {
             title: `D'masiv- Natural`,
             src: '/natural.mp3',
-            cover: '/2016/2016-cover.jpg',
+            cover: '/natural_cover.jpeg',
           },
         ]}
       />
@@ -50,7 +65,7 @@ export default function Home() {
             style={{ height: '100dvh' }}
           >
             <h2 className="mb-8 text-center font-serif text-lg italic font-medium text-[#335A4A]">
-              Keluarga Besar Bapak Jatmiko dan Bapak Selamet Romadoni
+              Keluarga Besar Bapak Jatmiko dan Bapak Slamet Romadoni
             </h2>
             {/* Kontainer utama */}
             <div className="max-w-md w-full rounded-2xl shadow-lg bg-white overflow-hidden z-10">
