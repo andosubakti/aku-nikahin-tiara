@@ -722,7 +722,10 @@ export default function Gallery() {
         {stories.map((story, index) => (
           <div key={story.id} className="flex flex-col items-center">
             <button
-              onClick={() => setActiveStory(index)}
+              onClick={() => {
+                setActiveStory(index)
+                setActiveImage(0)
+              }}
               className="relative flex-shrink-0 active:scale-95 transition-transform duration-150 outline-none"
             >
               {/* Rainbow ring with pulse only on border */}
