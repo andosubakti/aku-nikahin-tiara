@@ -307,9 +307,9 @@ export default function Home() {
                 return (
                   <div
                     key={index}
-                    className={`relative flex items-center justify-${
-                      isLeft ? 'start' : 'end'
-                    } w-full mb-10`}
+                    className={`relative flex items-center w-full mb-10 ${
+                      isLeft ? 'justify-start' : 'justify-end'
+                    }`}
                   >
                     {/* Card */}
                     <div
