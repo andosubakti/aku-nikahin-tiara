@@ -235,15 +235,128 @@ export default function Home() {
               alt="bg-story"
               className="absolute object-cover object-center"
             />
+            {/* Panah Scroll */}
+            <motion.button
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
+              onClick={() => {
+                const target = document.getElementById('end')
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+            >
+              {/* Icon bulat */}
+              <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
+                <ChevronDown className="w-6 h-6 text-[#335A4A]" />
+              </div>
+
+              {/* Label teks */}
+              <span
+                className="text-base font-semibold text-[#335A4A] tracking-wide"
+                style={{
+                  textShadow: `
+                  -1px -1px 0 #fff,
+                  1px -1px 0 #fff,
+                  -1px 1px 0 #fff,
+                  1px 1px 0 #fff
+                `,
+                }}
+              >
+                Our Milestones
+              </span>
+            </motion.button>
           </section>
-          {/* <div className="container relative z-10 mx-auto px-4 py-8">
-            <footer className="border-t border-emerald-200 py-8 text-center text-emerald-700">
-              <p className="mb-2 font-serif italic">
-                "Seperti pelangi, yang setia menunggu hujan reda."
-              </p>
-              <p className="text-sm">• Designed by Tiara Ayu Wulanjani •</p>
-            </footer>
-          </div> */}
+          <section
+            id="end"
+            className="w-screen relative snap-center snap-always flex flex-col justify-center items-center px-4"
+            style={{ height: '100dvh' }}
+          >
+            <h2 className="text-center font-serif text-lg italic font-medium text-[#335A4A] absolute top-5 z-[9]">
+              Our Milestones
+            </h2>
+            {/* Vertical Line */}
+            <div className="z-[9] relative w-full max-w-[15rem]">
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-[#335A4A]" />
+              {[
+                {
+                  label: 'Lamaran',
+                  status: 'done',
+                  date: '2 Feb 2025',
+                },
+                {
+                  label: 'Akad Nikah',
+                  status: 'current',
+                  date: '22 April 2025',
+                },
+                {
+                  label: 'Resepsi',
+                  status: 'upcoming',
+                  date: '2 Agustus 2025',
+                },
+              ].map((item, index) => {
+                const isLeft = index % 2 === 0
+                const bulletColor =
+                  item.status === 'done'
+                    ? 'bg-[#94A37E]'
+                    : item.status === 'current'
+                    ? 'bg-[#335A4A] animate-pulse'
+                    : 'bg-[#CED6BF]'
+
+                return (
+                  <div
+                    key={index}
+                    className={`relative flex items-center justify-${
+                      isLeft ? 'start' : 'end'
+                    } w-full mb-10`}
+                  >
+                    {/* Card */}
+                    <div
+                      className={`
+                        w-fit max-w-xs min-w-[109px] px-4 py-2 rounded-lg shadow-lg backdrop-blur-md border
+                        ${
+                          item.status === 'current'
+                            ? 'border-[#335A4A] scale-[1.03]'
+                            : 'border-[#CED6BF]/30'
+                        }
+                        bg-[#273226]/60 text-[#E8D8CF]
+                      `}
+                    >
+                      <div className="text-[10px] text-[#E8D8CF]/70">
+                        {item.date}
+                      </div>
+                      <div className="text-sm font-semibold">{item.label}</div>
+                      {/* {item.status === 'current' && (
+                        <div className="text-[10px] mt-1 text-[#94A37E]">
+                          You're here 🎉
+                        </div>
+                      )} */}
+                    </div>
+
+                    {/* Bullet */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full border-2 border-[#CED6BF] z-10 shadow-sm bg-white/40">
+                      <div
+                        className={`w-full h-full rounded-full ${bulletColor}`}
+                      />
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+            <div className="w-fit max-w-xs z-[9] min-w-[109px] px-4 py-2 rounded-lg shadow-lg backdrop-blur-md border border-[#CED6BF]/30 bg-[#273226]/60 text-[#E8D8CF]">
+              <div className="text-sm font-semibold">
+                Bab baru dimulai, Bismillah!
+              </div>
+            </div>
+            {/* Background */}
+            <Image
+              src="/closing.png"
+              fill
+              alt="bg-closing"
+              className="absolute object-cover object-center"
+            />
+          </section>
         </>
       )}
     </main>
