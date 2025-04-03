@@ -239,7 +239,7 @@ export default function Home() {
             <motion.button
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
+              className="absolute bottom-6 w-full flex flex-col items-center z-9 cursor-pointer focus:outline-none"
               onClick={() => {
                 const target = document.getElementById('end')
                 if (target) {
