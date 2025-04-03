@@ -270,12 +270,17 @@ export default function Home() {
           </section>
           <section
             id="end"
-            className="w-screen relative snap-center snap-always flex flex-col justify-center items-center px-4"
+            className="w-screen relative snap-center snap-always flex flex-col justify-center items-center px-4 pt-16"
             style={{ height: '100dvh' }}
           >
             <h2 className="text-center font-serif text-lg italic font-medium text-[#335A4A] absolute top-5 z-[9]">
               Our Milestones
             </h2>
+            <div className="w-fit max-w-xs z-[9] min-w-[109px] px-4 py-2 rounded-lg shadow-lg backdrop-blur-md border border-[#CED6BF]/30 bg-[#273226]/60 text-[#E8D8CF]">
+              <div className="text-sm font-semibold">
+                Pacaran 11 tahun wkwk 😅
+              </div>
+            </div>
             {/* Vertical Line */}
             <div className="z-[9] relative w-full max-w-[15rem]">
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-[#335A4A]" />
@@ -307,7 +312,7 @@ export default function Home() {
                 return (
                   <div
                     key={index}
-                    className={`relative flex items-center w-full mb-10 ${
+                    className={`relative flex items-center w-full mb-5 mt-5 ${
                       isLeft ? 'justify-start' : 'justify-end'
                     }`}
                   >
@@ -346,7 +351,7 @@ export default function Home() {
             </div>
             <div className="w-fit max-w-xs z-[9] min-w-[109px] px-4 py-2 rounded-lg shadow-lg backdrop-blur-md border border-[#CED6BF]/30 bg-[#273226]/60 text-[#E8D8CF]">
               <div className="text-sm font-semibold">
-                Bab baru dimulai, Bismillah!
+                Bab baru dimulai, Bismillah! 🙏🏻
               </div>
             </div>
             {/* Background */}
