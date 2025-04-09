@@ -18,6 +18,28 @@ export const metadata: Metadata = {
   title: 'Tiara & Ando',
   description: 'Join us for our special day, inspired by the magic of AI',
   generator: 'v0.dev',
+  openGraph: {
+    title: 'Tiara & Ando Wedding Invitation',
+    description: 'Join us for our special day, inspired by the magic of AI',
+    url: 'https://aku-nikahin-tiara.vercel.app',
+    siteName: 'Tiara & Ando Wedding',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Tiara & Ando Wedding Invitation',
+      },
+    ],
+    locale: 'id_ID',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tiara & Ando Wedding Invitation',
+    description: 'Join us for our special day, inspired by the magic of AI',
+    images: ['/og-image.jpg'],
+  },
 }
 
 export default async function RootLayout({
