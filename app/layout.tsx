@@ -52,6 +52,32 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta property="og:title" content="Tiara & Ando Wedding Invitation" />
+        <meta
+          property="og:description"
+          content="Join us for our special day, inspired by the magic of AI"
+        />
+        <meta
+          property="og:image"
+          content="https://aku-nikahin-tiara.vercel.app/og-image.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://aku-nikahin-tiara.vercel.app"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tiara & Ando Wedding Invitation" />
+        <meta
+          name="twitter:description"
+          content="Join us for our special day, inspired by the magic of AI"
+        />
+        <meta
+          name="twitter:image"
+          content="https://aku-nikahin-tiara.vercel.app/og-image.jpg"
+        />
+      </head>
       <body className={`${inter.variable} ${lora.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
