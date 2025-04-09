@@ -62,6 +62,11 @@ const stories = [
         caption: 'The perfect ending to a perfect day',
       },
       {
+        src: '/2014/2014-4.jpg',
+        alt: 'Sunset on our first date',
+        caption: 'The perfect ending to a perfect day',
+      },
+      {
         src: '/2014/2014-5.jpg',
         alt: 'Walking in the park after coffee',
         caption: 'Our first walk together',
@@ -134,6 +139,11 @@ const stories = [
         src: '/2016/2016-3.jpg',
         alt: 'Sunset on our first date',
         caption: 'The perfect ending to a perfect day',
+      },
+      {
+        src: '/2016/2016-4.jpg',
+        alt: 'Walking in the park after coffee',
+        caption: 'Our first walk together',
       },
       {
         src: '/2016/2016-5.jpg',

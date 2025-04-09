@@ -60,43 +60,65 @@ export default function Home() {
       {isOpened && (
         <>
           <section
-            id="thanks"
-            className="w-screen relative snap-center snap-always flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#94a37e] to-gray-300"
+            id="maps"
+            className="w-screen relative snap-center snap-always flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#CED6BF] to-[#94a37e]"
             style={{ height: '100dvh' }}
           >
-            <h2 className="mb-8 text-center font-serif text-lg italic font-medium text-[#335A4A]">
-              Keluarga Besar Bapak Jatmiko dan Bapak Slamet Romadoni
-            </h2>
             {/* Kontainer utama */}
-            <div className="max-w-md w-full rounded-2xl shadow-lg bg-white overflow-hidden z-10">
-              <div className="w-full h-48 relative">
-                <Image
-                  src="/keluarga.jpg"
-                  fill
-                  alt="keluarga"
-                  className="absolute object-cover object-center z-0"
-                />
-              </div>
+            <div className="max-w-md w-fit absolute top-[30%] right-[5%] rounded-2xl shadow-lg bg-white overflow-hidden z-10">
+              {/* Iframe Peta */}
+              {/* <div className="w-full h-48">
+                <iframe
+                  title="Lokasi Acara"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.782139674573!2d106.8582436!3d-6.292338399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f27be54480a9%3A0x789d17849b7d4bb1!2sJl.%20H.%20Nasih%20No.16%2C%20RT.9%2FRW.3%2C%20Kp.%20Tengah%2C%20Kec.%20Kramat%20jati%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013520!5e0!3m2!1sid!2sid!4v1743602991812!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="border-0 w-full h-full"
+                ></iframe>
+              </div> */}
 
               {/* Deskripsi dan Tombol */}
-              <div className="p-4 flex flex-col items-center">
-                <div className="flex flex-col items-center text-center">
+              {/* <div className="p-4 flex flex-col items-center">
+                <div className="flex flex-col items-start">
+                  <h2 className="text-xl font-semibold mb-2">
+                    Kediaman Bapak Jatmiko
+                  </h2>
                   <p className="text-sm text-gray-600 mb-4">
-                    Dengan penuh rasa syukur dan hormat, kami mengucapkan terima
-                    kasih yang sebesar-besarnya atas kehadiran serta doa restu
-                    Bapak/Ibu yang telah menjadi bagian dari momen bahagia kami.
+                    Jl. H. Nasih No.16 - RT. 09 RW. 003 <br />
+                    Kel. Gedong - Kec. Pasar Rebo - Jakarta Timur
                   </p>
                 </div>
-              </div>
+                <a
+                  href="https://maps.app.goo.gl/KHvNwmLkQqX9Hecx6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
+                >
+                  <MapPin className="w-5 h-5" />
+                  Lihat di Google Maps
+                </a>
+              </div> */}
+              <a
+                href="https://maps.app.goo.gl/KHvNwmLkQqX9Hecx6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#94a37e] text-white font-medium hover:bg-[#94a37e] transition text-xs"
+              >
+                <MapPin className="w-5 h-5" />
+                Lihat di Google Maps
+              </a>
             </div>
 
             {/* Background map image */}
-            {/* <Image
-              src="/map.jpeg"
+            <Image
+              src="/map.jpg"
               fill
               alt="bg-map"
               className="absolute object-cover object-center z-0"
-            /> */}
+            />
 
             {/* Panah Scroll */}
             <motion.button
@@ -104,7 +126,7 @@ export default function Home() {
               transition={{ duration: 1.5, repeat: Infinity }}
               className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
               onClick={() => {
-                const target = document.getElementById('maps')
+                const target = document.getElementById('timeline')
                 if (target) {
                   target.scrollIntoView({ behavior: 'smooth' })
                 }
@@ -127,58 +149,19 @@ export default function Home() {
                 `,
                 }}
               >
-                Lihat Lokasi
+                Rundown
               </span>
             </motion.button>
           </section>
 
           <section
-            id="maps"
+            id="timeline"
             className="w-screen relative snap-center snap-always flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#CED6BF] to-[#94a37e]"
             style={{ height: '100dvh' }}
           >
-            {/* Kontainer utama */}
-            <div className="max-w-md w-full rounded-2xl shadow-lg bg-white overflow-hidden z-10">
-              {/* Iframe Peta */}
-              <div className="w-full h-48">
-                <iframe
-                  title="Lokasi Acara"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.782139674573!2d106.8582436!3d-6.292338399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f27be54480a9%3A0x789d17849b7d4bb1!2sJl.%20H.%20Nasih%20No.16%2C%20RT.9%2FRW.3%2C%20Kp.%20Tengah%2C%20Kec.%20Kramat%20jati%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013520!5e0!3m2!1sid!2sid!4v1743602991812!5m2!1sid!2sid"
-                  width="100%"
-                  height="100%"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="border-0 w-full h-full"
-                ></iframe>
-              </div>
-
-              {/* Deskripsi dan Tombol */}
-              <div className="p-4 flex flex-col items-center">
-                <div className="flex flex-col items-start">
-                  <h2 className="text-xl font-semibold mb-2">
-                    Kediaman Bapak Jatmiko
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Jl. H. Nasih No.16 - RT. 09 RW. 003 <br />
-                    Kel. Gedong - Kec. Pasar Rebo - Jakarta Timur
-                  </p>
-                </div>
-                <a
-                  href="https://maps.app.goo.gl/KHvNwmLkQqX9Hecx6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
-                >
-                  <MapPin className="w-5 h-5" />
-                  Lihat di Google Maps
-                </a>
-              </div>
-            </div>
-
-            {/* Background map image */}
+            {/* Background timeline image */}
             <Image
-              src="/map.jpeg"
+              src="/timeline.jpg"
               fill
               alt="bg-map"
               className="absolute object-cover object-center z-0"
