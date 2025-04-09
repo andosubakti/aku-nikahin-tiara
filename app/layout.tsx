@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'Tiara & Ando Wedding',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://aku-nikahin-tiara.vercel.app/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Tiara & Ando Wedding Invitation',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tiara & Ando Wedding Invitation',
     description: 'Join us for our special day, inspired by the magic of AI',
-    images: ['/og-image.jpg'],
+    images: ['https://aku-nikahin-tiara.vercel.app/og-image.jpg'],
   },
 }
 
