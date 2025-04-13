@@ -46,544 +46,581 @@ const stories = [
     ],
   },
   {
-    id: 1,
-    title: '2014',
-    thumbnail: '/2014/2014-cover.jpg',
+    id: 99,
+    title: 'Vacation 🏝️',
+    thumbnail: '/vacation/vacation-5.jpg',
     images: [
       {
-        src: '/2014/2014-1.jpg',
+        src: '/vacation/vacation-1.jpg',
         alt: 'Our first date at the café',
-        caption: 'Where it all began',
+        caption:
+          'Tanggal 16 April 2014 jadi momen spesial buat Ando dan Tiara. Hari di mana dua anak SMA yang saling baper akhirnya resmi jadian—setelah chatan yang ga pernah putus.',
       },
       {
-        src: '/2014/2014-2.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2014/2014-3.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2014/2014-4.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2014/2014-5.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2014/2014-6.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2014/2014-7.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2014/2014-8.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: '2015',
-    thumbnail: '/2015/2015-cover.jpg',
-    images: [
-      {
-        src: '/2015/2015-1.jpg',
+        src: '/vacation/vacation-2.jpg',
         alt: 'Our first date at the café',
-        caption: 'Where it all began',
+        caption:
+          'Sejak hari itu, mereka makin bucin. Bukan cuma bareng ke kantin, tapi juga bareng dalam cerita-cerita kecil yang bikin masa SMA jadi lebih berwarna.',
       },
       {
-        src: '/2015/2015-2.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2015/2015-3.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2015/2015-5.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2015/2015-6.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: '2016',
-    thumbnail: '/2016/2016-cover.jpg',
-    images: [
-      {
-        src: '/2016/2016-1.jpg',
+        src: '/vacation/vacation-3.jpg',
         alt: 'Our first date at the café',
-        caption: 'Where it all began',
+        caption:
+          'Setiap jam istirahat, Ando rutin nyamperin ke kalas Tiara. Di gang depan kelas, mereka sering ngobrol dan ketawa, nggak peduli meski guru lewat. Dunia serasa cuma milik berdua.',
       },
       {
-        src: '/2016/2016-2.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2016/2016-3.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2016/2016-4.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2016/2016-5.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2016/2016-6.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2016/2016-cover.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2016/2016-8.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2016/2016-9.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2016/2016-10.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: '2017',
-    thumbnail: '/2017/2017-cover.jpg',
-    images: [
-      {
-        src: '/2017/2017-1.jpg',
-        alt: 'Day at the beach',
-        caption: 'Our favorite beach spot',
-      },
-      {
-        src: '/2017/2017-2.jpg',
-        alt: 'Building sandcastles',
-        caption: 'Our sandcastle masterpiece',
-      },
-      {
-        src: '/2017/2017-3.jpg',
-        alt: 'Beach sunset',
-        caption: 'Golden hour at the shore',
-      },
-      {
-        src: '/2017/2017-cover.jpg',
-        alt: 'Stargazing on the beach',
-        caption: 'Counting stars together',
-      },
-      {
-        src: '/2017/2017-4.jpg',
-        alt: 'Stargazing on the beach',
-        caption: 'Counting stars together',
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: '2018',
-    thumbnail: '/2018/2018-cover.jpg',
-    images: [
-      {
-        src: '/2018/2018-1.jpg',
-        alt: 'The proposal setup',
-        caption: 'The scene was set',
-      },
-      {
-        src: '/2018/2018-2.jpg',
-        alt: 'The proposal moment',
-        caption: 'The moment I said yes',
-      },
-      {
-        src: '/2018/2018-cover.jpg',
-        alt: 'Celebrating after',
-        caption: 'Celebrating our engagement',
-      },
-      {
-        src: '/2018/2018-3.jpg',
-        alt: 'The proposal moment',
-        caption: 'The moment I said yes',
-      },
-      {
-        src: '/2018/2018-4.jpg',
-        alt: 'Celebrating after',
-        caption: 'Celebrating our engagement',
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: '2019',
-    thumbnail: '/2019/2019-cover.jpg',
-    images: [
-      {
-        src: '/2019/2019-1.jpg',
-        alt: 'Engagement photo',
-        caption: 'Our official engagement photo',
-      },
-      {
-        src: '/2019/2019-2.jpg',
-        alt: 'Showing off the ring',
-        caption: 'The perfect ring',
-      },
-      {
-        src: '/2019/2019-3.jpg',
-        alt: 'Engagement photo',
-        caption: 'Our official engagement photo',
-      },
-      {
-        src: '/2019/2019-cover.jpg',
-        alt: 'Showing off the ring',
-        caption: 'The perfect ring',
-      },
-    ],
-  },
-  {
-    id: 7,
-    title: '2020',
-    thumbnail: '/2020/2020-cover.jpeg',
-    images: [
-      {
-        src: '/2020/2020-1.jpg',
-        alt: 'Our journey together',
-        caption: 'Looking back on our journey',
-      },
-      {
-        src: '/2020/2020-2.jpg',
-        alt: 'Planning our wedding',
-        caption: 'Planning our special day',
-      },
-      {
-        src: '/2020/2020-3.jpeg',
-        alt: 'Dreaming of the future',
-        caption: "Excited for what's to come",
-      },
-      {
-        src: '/2020/2020-4.jpeg',
-        alt: 'Planning our wedding',
-        caption: 'Planning our special day',
-      },
-      {
-        src: '/2020/2020-5.jpeg',
-        alt: 'Dreaming of the future',
-        caption: "Excited for what's to come",
-      },
-      {
-        src: '/2020/2020-cover.jpeg',
-        alt: 'Dreaming of the future',
-        caption: "Excited for what's to come",
-      },
-    ],
-  },
-  {
-    id: 8,
-    title: '2021',
-    thumbnail: '/2021/2021-cover.jpg',
-    images: [
-      {
-        src: '/2021/2021-1.jpg',
-        alt: 'Our journey together',
-        caption: 'Looking back on our journey',
-      },
-      {
-        src: '/2021/2021-2.jpg',
-        alt: 'Planning our wedding',
-        caption: 'Planning our special day',
-      },
-      {
-        src: '/2021/2021-3.jpg',
-        alt: 'Dreaming of the future',
-        caption: "Excited for what's to come",
-      },
-      {
-        src: '/2021/2021-4.jpg',
-        alt: 'Planning our wedding',
-        caption: 'Planning our special day',
-      },
-      {
-        src: '/2021/2021-cover.jpg',
-        alt: 'Dreaming of the future',
-        caption: "Excited for what's to come",
-      },
-    ],
-  },
-  {
-    id: 9,
-    title: '2022',
-    thumbnail: '/2022/2022-cover.jpg',
-    images: [
-      {
-        src: '/2022/2022-1.jpg',
+        src: '/vacation/vacation-4.jpg',
         alt: 'Our first date at the café',
-        caption: 'Where it all began',
+        caption:
+          'Saat pengumuman seleksi perguruan tinggi tiba, keduanya deg-degan. Sayangnya, hasilnya belum sesuai harapan. Ando memutuskan fokus ujian tahun depan, sementara Tiara lanjut kuliah di kampus swasta.',
       },
       {
-        src: '/2022/2022-2.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2022/2022-3.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-4.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-5.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2022/2022-6.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-7.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-8.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-9.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-10.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-11.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-12.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-13.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2022/2022-cover.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-    ],
-  },
-  {
-    id: 10,
-    title: '2023',
-    thumbnail: '/2023/2023-cover.jpg',
-    images: [
-      {
-        src: '/2023/2023-1.jpg',
+        src: '/vacation/vacation-5.jpg',
         alt: 'Our first date at the café',
-        caption: 'Where it all began',
-      },
-      {
-        src: '/2023/2023-2.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2023/2023-3.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2023/2023-4.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2023/2023-5.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2023/2023-6.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2023/2023-8.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2023/2023-cover.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
+        caption:
+          'Lalu di tahun 2017, Ando diterima di ITS Surabaya, dan Tiara di UI Depok. Sejak saat itu, babak baru dimulai: LDR dua kota',
       },
     ],
   },
-  {
-    id: 11,
-    title: '2024',
-    thumbnail: '/2024/2024-cover.jpg',
-    images: [
-      {
-        src: '/2024/2024-1.jpg',
-        alt: 'Our first date at the café',
-        caption: 'Where it all began',
-      },
-      {
-        src: '/2024/2024-2.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2024/2024-3.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2024/2024-4.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2024/2024-5.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2024/2024-6.jpeg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2024/2024-cover.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-    ],
-  },
-  {
-    id: 12,
-    title: '2025',
-    thumbnail: '/2025/2025-cover.jpg',
-    images: [
-      {
-        src: '/2025/2025-1.jpg',
-        alt: 'Our first date at the café',
-        caption: 'Where it all began',
-      },
-      {
-        src: '/2025/2025-2.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2025/2025-3.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-4.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-5.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-      {
-        src: '/2025/2025-6.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-7.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-8.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-9.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-10.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-11.jpg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-12.jpeg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-13.jpeg',
-        alt: 'Sunset on our first date',
-        caption: 'The perfect ending to a perfect day',
-      },
-      {
-        src: '/2025/2025-cover.jpg',
-        alt: 'Walking in the park after coffee',
-        caption: 'Our first walk together',
-      },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: '2014',
+  //   thumbnail: '/2014/2014-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2014/2014-1.jpg',
+  //       alt: 'Our first date at the café',
+  //       caption: 'Where it all began',
+  //     },
+  //     {
+  //       src: '/2014/2014-2.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2014/2014-3.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2014/2014-4.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2014/2014-5.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2014/2014-6.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2014/2014-7.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2014/2014-8.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 2,
+  //   title: '2015',
+  //   thumbnail: '/2015/2015-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2015/2015-1.jpg',
+  //       alt: 'Our first date at the café',
+  //       caption: 'Where it all began',
+  //     },
+  //     {
+  //       src: '/2015/2015-2.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2015/2015-3.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2015/2015-5.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2015/2015-6.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 3,
+  //   title: '2016',
+  //   thumbnail: '/2016/2016-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2016/2016-1.jpg',
+  //       alt: 'Our first date at the café',
+  //       caption: 'Where it all began',
+  //     },
+  //     {
+  //       src: '/2016/2016-2.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2016/2016-3.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2016/2016-4.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2016/2016-5.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2016/2016-6.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2016/2016-cover.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2016/2016-8.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2016/2016-9.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2016/2016-10.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 4,
+  //   title: '2017',
+  //   thumbnail: '/2017/2017-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2017/2017-1.jpg',
+  //       alt: 'Day at the beach',
+  //       caption: 'Our favorite beach spot',
+  //     },
+  //     {
+  //       src: '/2017/2017-2.jpg',
+  //       alt: 'Building sandcastles',
+  //       caption: 'Our sandcastle masterpiece',
+  //     },
+  //     {
+  //       src: '/2017/2017-3.jpg',
+  //       alt: 'Beach sunset',
+  //       caption: 'Golden hour at the shore',
+  //     },
+  //     {
+  //       src: '/2017/2017-cover.jpg',
+  //       alt: 'Stargazing on the beach',
+  //       caption: 'Counting stars together',
+  //     },
+  //     {
+  //       src: '/2017/2017-4.jpg',
+  //       alt: 'Stargazing on the beach',
+  //       caption: 'Counting stars together',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 5,
+  //   title: '2018',
+  //   thumbnail: '/2018/2018-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2018/2018-1.jpg',
+  //       alt: 'The proposal setup',
+  //       caption: 'The scene was set',
+  //     },
+  //     {
+  //       src: '/2018/2018-2.jpg',
+  //       alt: 'The proposal moment',
+  //       caption: 'The moment I said yes',
+  //     },
+  //     {
+  //       src: '/2018/2018-cover.jpg',
+  //       alt: 'Celebrating after',
+  //       caption: 'Celebrating our engagement',
+  //     },
+  //     {
+  //       src: '/2018/2018-3.jpg',
+  //       alt: 'The proposal moment',
+  //       caption: 'The moment I said yes',
+  //     },
+  //     {
+  //       src: '/2018/2018-4.jpg',
+  //       alt: 'Celebrating after',
+  //       caption: 'Celebrating our engagement',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 6,
+  //   title: '2019',
+  //   thumbnail: '/2019/2019-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2019/2019-1.jpg',
+  //       alt: 'Engagement photo',
+  //       caption: 'Our official engagement photo',
+  //     },
+  //     {
+  //       src: '/2019/2019-2.jpg',
+  //       alt: 'Showing off the ring',
+  //       caption: 'The perfect ring',
+  //     },
+  //     {
+  //       src: '/2019/2019-3.jpg',
+  //       alt: 'Engagement photo',
+  //       caption: 'Our official engagement photo',
+  //     },
+  //     {
+  //       src: '/2019/2019-cover.jpg',
+  //       alt: 'Showing off the ring',
+  //       caption: 'The perfect ring',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 7,
+  //   title: '2020',
+  //   thumbnail: '/2020/2020-cover.jpeg',
+  //   images: [
+  //     {
+  //       src: '/2020/2020-1.jpg',
+  //       alt: 'Our journey together',
+  //       caption: 'Looking back on our journey',
+  //     },
+  //     {
+  //       src: '/2020/2020-2.jpg',
+  //       alt: 'Planning our wedding',
+  //       caption: 'Planning our special day',
+  //     },
+  //     {
+  //       src: '/2020/2020-3.jpeg',
+  //       alt: 'Dreaming of the future',
+  //       caption: "Excited for what's to come",
+  //     },
+  //     {
+  //       src: '/2020/2020-4.jpeg',
+  //       alt: 'Planning our wedding',
+  //       caption: 'Planning our special day',
+  //     },
+  //     {
+  //       src: '/2020/2020-5.jpeg',
+  //       alt: 'Dreaming of the future',
+  //       caption: "Excited for what's to come",
+  //     },
+  //     {
+  //       src: '/2020/2020-cover.jpeg',
+  //       alt: 'Dreaming of the future',
+  //       caption: "Excited for what's to come",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 8,
+  //   title: '2021',
+  //   thumbnail: '/2021/2021-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2021/2021-1.jpg',
+  //       alt: 'Our journey together',
+  //       caption: 'Looking back on our journey',
+  //     },
+  //     {
+  //       src: '/2021/2021-2.jpg',
+  //       alt: 'Planning our wedding',
+  //       caption: 'Planning our special day',
+  //     },
+  //     {
+  //       src: '/2021/2021-3.jpg',
+  //       alt: 'Dreaming of the future',
+  //       caption: "Excited for what's to come",
+  //     },
+  //     {
+  //       src: '/2021/2021-4.jpg',
+  //       alt: 'Planning our wedding',
+  //       caption: 'Planning our special day',
+  //     },
+  //     {
+  //       src: '/2021/2021-cover.jpg',
+  //       alt: 'Dreaming of the future',
+  //       caption: "Excited for what's to come",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 9,
+  //   title: '2022',
+  //   thumbnail: '/2022/2022-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2022/2022-1.jpg',
+  //       alt: 'Our first date at the café',
+  //       caption: 'Where it all began',
+  //     },
+  //     {
+  //       src: '/2022/2022-2.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2022/2022-3.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-4.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-5.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2022/2022-6.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-7.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-8.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-9.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-10.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-11.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-12.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-13.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2022/2022-cover.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 10,
+  //   title: '2023',
+  //   thumbnail: '/2023/2023-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2023/2023-1.jpg',
+  //       alt: 'Our first date at the café',
+  //       caption: 'Where it all began',
+  //     },
+  //     {
+  //       src: '/2023/2023-2.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2023/2023-3.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2023/2023-4.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2023/2023-5.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2023/2023-6.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2023/2023-8.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2023/2023-cover.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 11,
+  //   title: '2024',
+  //   thumbnail: '/2024/2024-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2024/2024-1.jpg',
+  //       alt: 'Our first date at the café',
+  //       caption: 'Where it all began',
+  //     },
+  //     {
+  //       src: '/2024/2024-2.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2024/2024-3.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2024/2024-4.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2024/2024-5.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2024/2024-6.jpeg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2024/2024-cover.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 12,
+  //   title: '2025',
+  //   thumbnail: '/2025/2025-cover.jpg',
+  //   images: [
+  //     {
+  //       src: '/2025/2025-1.jpg',
+  //       alt: 'Our first date at the café',
+  //       caption: 'Where it all began',
+  //     },
+  //     {
+  //       src: '/2025/2025-2.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2025/2025-3.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-4.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-5.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //     {
+  //       src: '/2025/2025-6.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-7.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-8.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-9.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-10.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-11.jpg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-12.jpeg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-13.jpeg',
+  //       alt: 'Sunset on our first date',
+  //       caption: 'The perfect ending to a perfect day',
+  //     },
+  //     {
+  //       src: '/2025/2025-cover.jpg',
+  //       alt: 'Walking in the park after coffee',
+  //       caption: 'Our first walk together',
+  //     },
+  //   ],
+  // },
 ]
 
 export default function Gallery() {
