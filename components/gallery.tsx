@@ -22,22 +22,26 @@ const stories = [
       {
         src: '/Intro/intro-1.png',
         alt: 'Our first date at the café',
-        caption: 'Where it all began',
+        caption:
+          'Dulu di SMP, Ando dan Tiara sekelas—tapi beda dunia. Nggak ngobrol, nggak kenal, cuma tahu nama doang. Asing banget, kayak NPC di kelas sendiri.',
       },
       {
         src: '/Intro/intro-2.png',
         alt: 'Our first date at the café',
-        caption: 'Where it all began',
+        caption:
+          'Pas ketemu lagi di SMA, Ando mulai mengagumi Tiara diam-diam. Tiara yang ramah, senyum dikit aja rasanya kayak disapa bidadari.',
       },
       {
         src: '/Intro/intro-3.png',
         alt: 'Our first date at the café',
-        caption: 'Where it all began',
+        caption:
+          'Suatu pagi, Tiara ngucapin ulang tahun. Ando kaget (karena lupa), terus langsung GR—"Wah, dia perhatian banget nih!" Padahal… Tiara cuma liat notifikasi ulang tahun di Facebook.',
       },
       {
         src: '/Intro/intro-4.png',
         alt: 'Our first date at the café',
-        caption: 'Where it all began',
+        caption:
+          'Lucunya, Tiara malah mulai iseng kirim SMS anonim buat ngerjain Ando. Pucuk dicinta ulam pun tiba, momen itu jadi awal mereka sering chattingan. Dari iseng… jadi baper.',
       },
     ],
   },
@@ -622,7 +626,7 @@ export default function Gallery() {
           }
           return prev + 1
         })
-      }, 50) // 5 seconds total duration (50ms * 100)
+      }, 70) // 7 seconds total duration (70ms * 100)
 
       // Prevent scrolling when story is open
       document.body.style.overflow = 'hidden'
