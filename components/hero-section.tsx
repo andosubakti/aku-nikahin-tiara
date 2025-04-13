@@ -58,7 +58,7 @@ export default function HeroSection({
             transition={{ duration: 1 }}
             className="absolute inset-0"
           >
-            <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-[9] text-[#335A4A] p-2">
+            <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-[9] text-[#335A4A] p-2 text-center max-w-[80%] w-full">
               {name ? `Yth. ${name}` : ''}
             </div>
             <Image src={CoverImage} fill alt="cover-img" />
