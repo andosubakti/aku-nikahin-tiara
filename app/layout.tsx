@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'Tiara & Ando Wedding',
     images: [
       {
-        url: 'https://aku-nikahin-tiara.vercel.app/og-image.jpg',
+        url: 'https://aku-nikahin-tiara.vercel.app/og-image.jpeg',
         width: 1200,
         height: 630,
         alt: 'Tiara & Ando Wedding Invitation',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tiara & Ando Wedding Invitation',
     description: 'Join us for our special day, inspired by the magic of AI',
-    images: ['https://aku-nikahin-tiara.vercel.app/og-image.jpg'],
+    images: ['https://aku-nikahin-tiara.vercel.app/og-image.jpeg'],
   },
 }
 
@@ -60,7 +60,7 @@ export default async function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://aku-nikahin-tiara.vercel.app/og-image.jpg"
+          content="https://aku-nikahin-tiara.vercel.app/og-image.jpeg"
         />
         <meta
           property="og:url"
@@ -75,7 +75,7 @@ export default async function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://aku-nikahin-tiara.vercel.app/og-image.jpg"
+          content="https://aku-nikahin-tiara.vercel.app/og-image.jpeg"
         />
       </head>
       <body className={`${inter.variable} ${lora.variable} font-sans`}>
