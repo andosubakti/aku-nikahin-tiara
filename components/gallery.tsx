@@ -180,32 +180,32 @@ const stories = [
     thumbnail: '/galeri-1.webp',
     images: [
       {
-        src: '/lamaran/lamaran-1.jpeg',
+        src: '/galeri-1.webp',
         alt: 'Our first date at the café',
         caption: '',
       },
       {
-        src: '/lamaran/lamaran-2.jpeg',
+        src: '/galeri-2.webp',
         alt: 'Our first date at the café',
         caption: '',
       },
       {
-        src: '/lamaran/lamaran-3.jpeg',
+        src: '/galeri-3.webp',
         alt: 'Our first date at the café',
         caption: '',
       },
       {
-        src: '/lamaran/lamaran-4.jpeg',
+        src: '/galeri-4.webp',
         alt: 'Our first date at the café',
         caption: '',
       },
       {
-        src: '/lamaran/lamaran-5.jpeg',
+        src: '/galeri-5.webp',
         alt: 'Our first date at the café',
         caption: '',
       },
       {
-        src: '/lamaran/lamaran-6.jpeg',
+        src: '/galeri-6.webp',
         alt: 'Our first date at the café',
         caption: '',
       },

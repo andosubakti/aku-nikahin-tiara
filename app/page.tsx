@@ -377,7 +377,7 @@ export default function Home() {
           {!isFormal && (
             <section
               id="end"
-              className="w-screen relative snap-center snap-always flex flex-col justify-center items-center px-4 pt-16"
+              className="w-screen max-w-[480px] m-auto relative snap-center snap-always flex flex-col justify-center items-center px-4 pt-16"
               style={{ height: '100dvh' }}
             >
               <h2 className="text-center font-serif text-lg italic font-medium text-[#335A4A] absolute top-5 z-[9]">
