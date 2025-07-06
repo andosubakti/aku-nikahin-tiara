@@ -174,6 +174,43 @@ const stories = [
       },
     ],
   },
+  {
+    id: 5,
+    title: 'Akad Nikah!!!',
+    thumbnail: '/galeri-1.webp',
+    images: [
+      {
+        src: '/lamaran/lamaran-1.jpeg',
+        alt: 'Our first date at the café',
+        caption: '',
+      },
+      {
+        src: '/lamaran/lamaran-2.jpeg',
+        alt: 'Our first date at the café',
+        caption: '',
+      },
+      {
+        src: '/lamaran/lamaran-3.jpeg',
+        alt: 'Our first date at the café',
+        caption: '',
+      },
+      {
+        src: '/lamaran/lamaran-4.jpeg',
+        alt: 'Our first date at the café',
+        caption: '',
+      },
+      {
+        src: '/lamaran/lamaran-5.jpeg',
+        alt: 'Our first date at the café',
+        caption: '',
+      },
+      {
+        src: '/lamaran/lamaran-6.jpeg',
+        alt: 'Our first date at the café',
+        caption: '',
+      },
+    ],
+  },
 ]
 
 export default function Gallery() {

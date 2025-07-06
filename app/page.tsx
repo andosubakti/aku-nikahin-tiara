@@ -1,19 +1,47 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import HeroSection from '@/components/hero-section'
 import WeddingDetails from '@/components/wedding-details'
 import RsvpForm from '@/components/rsvp-form'
 import Gallery from '@/components/gallery'
 import FloatingElements from '@/components/floating-elements'
 import BackgroundMusic from '@/components/background-musics'
+import ImageViewer from '@/components/image-viewer'
 import Image from 'next/image'
 import { MapPin, ChevronDown } from 'lucide-react'
 import { motion } from 'framer-motion'
+import QRImage from '@/assets/qr-code.png'
 
 export default function Home() {
   const [isOpened, setIsOpened] = useState(false)
   const [isFormal, setIsFormal] = useState(false)
+  const [isTimelineVisible, setIsTimelineVisible] = useState(false)
+  const [isImageViewerOpen, setIsImageViewerOpen] = useState(false)
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const timelineRef = useRef<HTMLElement>(null)
+
+  // Timeline images array
+  const timelineImages = [
+    '/galeri-1.webp',
+    '/galeri-2.webp',
+    '/galeri-3.webp',
+    '/galeri-4.webp',
+    '/galeri-5.webp',
+    '/galeri-6.webp',
+  ]
+
+  // Handle image click
+  const handleImageClick = (index: number) => {
+    setSelectedImageIndex(index)
+    setIsImageViewerOpen(true)
+  }
+
+  // Handle image viewer close
+  const handleImageViewerClose = () => {
+    setIsImageViewerOpen(false)
+  }
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
@@ -21,15 +49,81 @@ export default function Home() {
     setIsFormal(formal === 'true')
   }, [])
 
+  useEffect(() => {
+    if (!timelineRef.current || !videoRef.current) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.8) {
+            // Video is 80% visible, start playing
+            setIsTimelineVisible(true)
+            if (videoRef.current) {
+              videoRef.current.play().catch((error) => {
+                console.log('Autoplay prevented:', error)
+              })
+            }
+          } else {
+            // Video is not visible enough, pause
+            setIsTimelineVisible(false)
+            if (videoRef.current) {
+              videoRef.current.pause()
+            }
+          }
+        })
+      },
+      {
+        threshold: 0.8, // Trigger when 80% of the section is visible
+        rootMargin: '0px',
+      },
+    )
+
+    observer.observe(timelineRef.current)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [isOpened])
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (videoRef.current) {
+        if (document.hidden) {
+          // Page is hidden (minimized, tab switched, etc.), pause video
+          videoRef.current.pause()
+        } else {
+          // Page is visible again, check if timeline section is visible
+          if (timelineRef.current) {
+            const rect = timelineRef.current.getBoundingClientRect()
+            const isVisible =
+              rect.top < window.innerHeight * 0.2 &&
+              rect.bottom > window.innerHeight * 0.8
+
+            if (isVisible) {
+              videoRef.current.play().catch((error) => {
+                console.log('Autoplay prevented:', error)
+              })
+            }
+          }
+        }
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
+  }, [])
+
   return (
     <main
-      className="relative snap-y snap-mandatory overflow-scroll scroll-smooth bg-[#CED6BF]"
+      className="relative snap-y snap-mandatory overflow-scroll scroll-smooth bg-[#407771]"
       style={{ height: '100dvh' }}
     >
-      <FloatingElements />
       <HeroSection setIsOpened={setIsOpened} />
       <BackgroundMusic
-        isActive={isOpened}
+        isActive={isOpened && !isTimelineVisible}
         playlist={[
           {
             title: 'Grup Besar Kecil - Samuel & Samia',
@@ -68,64 +162,55 @@ export default function Home() {
         <>
           <section
             id="maps"
-            className="w-screen relative snap-center snap-always flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#CED6BF] to-[#94a37e]"
-            style={{ height: '100dvh' }}
+            className="w-screen bg-[url(/panggih.webp)] relative snap-center snap-always flex flex-col"
+            style={{
+              height: '100dvh',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+            }}
           >
             {/* Kontainer utama */}
-            <div className="max-w-md w-fit absolute top-[30%] right-[5%] rounded-2xl shadow-lg bg-white overflow-hidden z-10">
-              {/* Iframe Peta */}
-              {/* <div className="w-full h-48">
-                <iframe
-                  title="Lokasi Acara"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.782139674573!2d106.8582436!3d-6.292338399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f27be54480a9%3A0x789d17849b7d4bb1!2sJl.%20H.%20Nasih%20No.16%2C%20RT.9%2FRW.3%2C%20Kp.%20Tengah%2C%20Kec.%20Kramat%20jati%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013520!5e0!3m2!1sid!2sid!4v1743602991812!5m2!1sid!2sid"
-                  width="100%"
-                  height="100%"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="border-0 w-full h-full"
-                ></iframe>
-              </div> */}
+            <div className="backdrop-blur-sm bg-[#1c514f]/50 max-w-[480px] md:m-auto rounded-2xl p-6 shadow-lg border border-white/30 flex flex-col gap-4 text-lg m-6">
+              <p className="text-base">Insya Allah akan dilaksanakan pada</p>
+              <p className="font-semibold">
+                Sabtu, 02 Agustus 2025 <br /> Pukul 11.00 - 13.00 WIB
+              </p>
 
-              {/* Deskripsi dan Tombol */}
-              {/* <div className="p-4 flex flex-col items-center">
-                <div className="flex flex-col items-start">
-                  <h2 className="text-xl font-semibold mb-2">
-                    Kediaman Bapak Jatmiko
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Jl. H. Nasih No.16 - RT. 09 RW. 003 <br />
-                    Kel. Gedong - Kec. Pasar Rebo - Jakarta Timur
-                  </p>
-                </div>
+              <div className="leading-relaxed font-semibold">
+                <p>Gedung Manunggal Dislaikad</p>
+                <p>Jl. Manunggal Raya Cibubur</p>
+                <p>Ciracas - Jakarta Timur</p>
+              </div>
+
+              <div className="flex flex-col gap-2 items-center justify-center">
+                <Image
+                  width={100}
+                  height={100}
+                  alt="qr code"
+                  src={QRImage}
+                  className="rounded-xl"
+                />
                 <a
-                  href="https://maps.app.goo.gl/KHvNwmLkQqX9Hecx6"
+                  href="https://maps.app.goo.gl/BdxhQB7f5rsYY6H88"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition text-xs max-w-md w-fit shadow-lg bg-black overflow-hidden"
                 >
                   <MapPin className="w-5 h-5" />
                   Lihat di Google Maps
                 </a>
-              </div> */}
-              <a
-                href="https://maps.app.goo.gl/KHvNwmLkQqX9Hecx6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#94a37e] text-white font-medium hover:bg-[#94a37e] transition text-xs"
-              >
-                <MapPin className="w-5 h-5" />
-                Lihat di Google Maps
-              </a>
-            </div>
+              </div>
 
-            {/* Background map image */}
-            <Image
-              src="/map.jpg"
-              fill
-              alt="bg-map"
-              className="absolute object-cover object-center z-0"
-            />
+              <p className="leading-relaxed italic text-base font-semibold">
+                Merupakan kehormatan dan kebahagiaan bagi kami, apabila
+                Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa &
+                restunya, terima kasih.
+              </p>
+              <p className="text-sm text-center italic font-bold">
+                (Kel. Bpk. Jatmiko Bowo Leksono) <br /> & <br /> (Kel. Bpk.
+                Slamet Romadhoni)
+              </p>
+            </div>
 
             {/* Panah Scroll */}
             <motion.button
@@ -156,29 +241,58 @@ export default function Home() {
                 `,
                 }}
               >
-                Rundown
+                Akad Nikah
               </span>
             </motion.button>
           </section>
 
           <section
+            ref={timelineRef}
             id="timeline"
-            className="w-screen relative snap-center snap-always flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#CED6BF] to-[#94a37e]"
+            className="w-screen relative snap-center snap-always flex flex-col items-center justify-center bg-black"
             style={{ height: '100dvh' }}
           >
-            {/* Background timeline image */}
-            <Image
-              src="/timeline.jpg"
-              fill
-              alt="bg-map"
-              className="absolute object-cover object-center z-0"
-            />
+            <div className="absolute inset-0 w-full h-full flex flex-col">
+              <video
+                ref={videoRef}
+                src="/video-akad.mp4"
+                className="w-full max-h-[45vh] md:max-h-[100vh] object-contain flex-shrink-0"
+                controls
+                loop
+                playsInline
+              />
+              <div className="video-panel flex-1 min-h-0 flex flex-col md:hidden">
+                <div className="m-2 p-2 flex flex-col gap-1">
+                  <h2 className="text-lg text-white">Pelaksanaan Akad Nikah</h2>
+                  <p className="text-sm text-gray-400">
+                    Selasa Wage, 22 April 2025
+                  </p>
+                </div>
+                <div className="photo-galery grid grid-cols-2 gap-2 flex-1 overflow-y-auto pb-4 px-4">
+                  {/* grid photo */}
+                  {timelineImages.map((src, idx) => (
+                    <div
+                      key={idx}
+                      className="relative h-full overflow-hidden rounded-lg m-auto shadow-md cursor-pointer"
+                      onClick={() => handleImageClick(idx)}
+                    >
+                      <img
+                        src={src}
+                        alt={`Galeri foto ${idx + 1}`}
+                        className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
 
             {/* Panah Scroll */}
             <motion.button
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
+              className="absolute bottom-6 w-fit flex flex-col items-center z-30 cursor-pointer focus:outline-none"
               onClick={() => {
                 const target = document.getElementById('gallery')
                 if (target) {
@@ -211,7 +325,7 @@ export default function Home() {
           {!isFormal && (
             <section
               id="gallery"
-              className="w-screen relative snap-center snap-always"
+              className="w-screen max-w-[480px] m-auto relative snap-center snap-always"
               style={{ height: '100dvh' }}
             >
               <div className="absolute top-[24px] z-[9] w-full">
@@ -354,6 +468,14 @@ export default function Home() {
             </section>
           )}
         </>
+      )}
+      {isImageViewerOpen && (
+        <ImageViewer
+          images={timelineImages}
+          isOpen={isImageViewerOpen}
+          onClose={handleImageViewerClose}
+          initialIndex={selectedImageIndex}
+        />
       )}
     </main>
   )

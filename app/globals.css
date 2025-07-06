@@ -2,29 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 142 72% 29%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 142 72% 29%;
+    /* Background: Dominant deep teal from the image */
+    --background: 190 45% 22%; /* Deep Teal/Green */
+    /* Foreground: Light color for text on dark backgrounds (e.g., on --background) */
+    --foreground: 0 0% 98%; /* Very Light White/Off-white */
+
+    /* Card/Popover: Color of the light stone structures in the image */
+    --card: 35 12% 87%; /* Light Beige/Stone */
+    --card-foreground: 115 25% 12%; /* Darkest green for text on light cards */
+    --popover: 35 12% 87%; /* Light Beige/Stone */
+    --popover-foreground: 115 25% 12%; /* Darkest green for text on light popovers */
+
+    /* Primary: Vibrant green from the foliage */
+    --primary: 135 35% 45%; /* Vibrant Leaf Green */
+    --primary-foreground: 0 0% 98%; /* Light text on primary green */
+
+    /* Secondary: Peacock blue-green or another prominent green */
+    --secondary: 195 65% 45%; /* Peacock Blue-Green */
+    --secondary-foreground: 115 25% 12%; /* Darkest green for text on secondary */
+
+    /* Muted: A softer, more desaturated green from the foliage */
+    --muted: 135 20% 35%; /* Muted Green */
+    --muted-foreground: 115 25% 12%; /* Darkest green for text on muted */
+
+    /* Accent: The bright orange flowers from the image */
+    --accent: 30 95% 55%; /* Bright Orange */
+    --accent-foreground: 115 25% 12%; /* Darkest green for text on accent */
+
+    /* Destructive: The pink flowers from the image (or could use a deeper orange/red) */
+    --destructive: 325 75% 65%; /* Pink Flower */
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive */
+
+    /* Border/Input: A slightly lighter or more desaturated version of the background teal */
+    --border: 190 30% 30%; /* Muted Teal Border */
+    --input: 190 30% 30%; /* Muted Teal Input */
+
+    /* Ring: Often matches primary or a distinct highlight */
+    --ring: 135 35% 45%; /* Same as Primary Green */
     --radius: 0.75rem;
   }
+}
+
+body {
+  color: #c5f3da !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 @layer base {
