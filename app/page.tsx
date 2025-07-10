@@ -255,7 +255,7 @@ export default function Home() {
             <div className="absolute inset-0 w-full h-full flex flex-col">
               <video
                 ref={videoRef}
-                src="/video-akad.mp4"
+                src="https://think-like-a-shortcut.work/Copy%20of%20Tiara%26Ando.mp4"
                 className="w-full max-h-[45vh] md:max-h-[100vh] object-contain flex-shrink-0"
                 controls
                 loop
