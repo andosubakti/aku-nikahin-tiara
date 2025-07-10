@@ -122,41 +122,58 @@ export default function Home() {
       style={{ height: '100dvh' }}
     >
       <HeroSection setIsOpened={setIsOpened} />
-      <BackgroundMusic
-        isActive={isOpened && !isTimelineVisible}
-        playlist={[
-          {
-            title: 'Grup Besar Kecil - Samuel & Samia',
-            src: '/samuel_dan_samia.mp3',
-            cover: '/samuel_samia_cover.png',
-          },
-          {
-            title: 'The Adams - Timur',
-            src: '/timur.mp3',
-            cover: '/timur_cover.jpg',
-          },
-          {
-            title: 'Sheila on 7 - Memori Baik',
-            src: '/memori_baik.mp3',
-            cover: '/memori_baik_cover.jpeg',
-          },
-          {
-            title: 'Kabar Burung - Kamu Rahasia',
-            src: '/kamu_rahasia.mp3',
-            cover: '/kamu_rahasia_cover.jpg',
-          },
-          {
-            title: 'Ungu feat. Andien - Saat Bahagia',
-            src: '/saat_bahagia.mp3',
-            cover: '/saat_bahagia_cover.jpeg',
-          },
-          {
-            title: `D'masiv- Natural`,
-            src: '/natural.mp3',
-            cover: '/natural_cover.jpeg',
-          },
-        ]}
-      />
+      {/* Background music logic */}
+      {isFormal ? (
+        isOpened && (
+          <BackgroundMusic
+            isActive={isOpened && !isTimelineVisible}
+            playlist={[
+              {
+                title: 'Kebo Giro',
+                src: '/kebo_giro.mp3',
+                cover: '/kebo_giro.mp3', // You can use a cover image if available
+              },
+            ]}
+            hideFloatingDisk={true}
+          />
+        )
+      ) : (
+        <BackgroundMusic
+          isActive={isOpened && !isTimelineVisible}
+          playlist={[
+            {
+              title: 'Grup Besar Kecil - Samuel & Samia',
+              src: '/samuel_dan_samia.mp3',
+              cover: '/samuel_samia_cover.png',
+            },
+            {
+              title: 'The Adams - Timur',
+              src: '/timur.mp3',
+              cover: '/timur_cover.jpg',
+            },
+            {
+              title: 'Sheila on 7 - Memori Baik',
+              src: '/memori_baik.mp3',
+              cover: '/memori_baik_cover.jpeg',
+            },
+            {
+              title: 'Kabar Burung - Kamu Rahasia',
+              src: '/kamu_rahasia.mp3',
+              cover: '/kamu_rahasia_cover.jpg',
+            },
+            {
+              title: 'Ungu feat. Andien - Saat Bahagia',
+              src: '/saat_bahagia.mp3',
+              cover: '/saat_bahagia_cover.jpeg',
+            },
+            {
+              title: `D'masiv- Natural`,
+              src: '/natural.mp3',
+              cover: '/natural_cover.jpeg',
+            },
+          ]}
+        />
+      )}
 
       {isOpened && (
         <>

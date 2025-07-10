@@ -8,9 +8,14 @@ import { Pause, Play, SkipForward, SkipBack } from 'lucide-react'
 type Props = {
   isActive: boolean
   playlist: { title: string; src: string; cover?: string }[]
+  hideFloatingDisk?: boolean // tambahkan prop opsional
 }
 
-export default function BackgroundMusic({ isActive, playlist }: Props) {
+export default function BackgroundMusic({
+  isActive,
+  playlist,
+  hideFloatingDisk,
+}: Props) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const playerRef = useRef<HTMLDivElement>(null)
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
@@ -140,23 +145,25 @@ export default function BackgroundMusic({ isActive, playlist }: Props) {
       {isActive && (
         <>
           {/* Floating disk */}
-          <motion.div
-            className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center cursor-pointer"
-            animate={{ rotate: isPlaying ? 360 : 0 }}
-            transition={{
-              repeat: isPlaying ? Infinity : 0,
-              duration: 6,
-              ease: 'linear',
-            }}
-            onClick={() => setShowPlayer((prev) => !prev)}
-          >
-            <Image
-              src={currentTrack.cover || '/2016/2016-cover.jpg'}
-              alt="Music Disk"
-              fill
-              className="rounded-full object-cover"
-            />
-          </motion.div>
+          {!hideFloatingDisk && (
+            <motion.div
+              className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center cursor-pointer"
+              animate={{ rotate: isPlaying ? 360 : 0 }}
+              transition={{
+                repeat: isPlaying ? Infinity : 0,
+                duration: 6,
+                ease: 'linear',
+              }}
+              onClick={() => setShowPlayer((prev) => !prev)}
+            >
+              <Image
+                src={currentTrack.cover || '/2016/2016-cover.jpg'}
+                alt="Music Disk"
+                fill
+                className="rounded-full object-cover"
+              />
+            </motion.div>
+          )}
 
           {/* Mini player */}
           <AnimatePresence>
