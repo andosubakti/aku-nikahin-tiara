@@ -123,6 +123,8 @@ export default function ConfigPage() {
   const [editedContent, setEditedContent] = useState('')
   const [loadingTemplates, setLoadingTemplates] = useState(true)
 
+  const isLogin = localStorage.getItem('isAdmin') === 'true'
+
   // Fetch templates dari API
   async function fetchTemplates() {
     setLoadingTemplates(true)
@@ -663,7 +665,11 @@ export default function ConfigPage() {
   const searchInputRef = useRef<HTMLInputElement>(null)
 
   return (
-    <div className="min-h-screen h-screen overflow-y-auto bg-gradient-to-br from-primary/80 to-secondary/80">
+    <div
+      className={`min-h-screen h-screen overflow-y-auto bg-gradient-to-br from-primary/80 to-secondary/80 ${
+        isLogin ? '' : 'hidden'
+      }`}
+    >
       {/* Header Navigasi Modern */}
       <header className="sticky top-0 z-20 w-full bg-white/90 backdrop-blur-md shadow border-b border-primary/20 flex items-center justify-between px-6 py-3">
         <div className="flex items-center gap-2">
