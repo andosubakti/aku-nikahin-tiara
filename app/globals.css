@@ -34,8 +34,8 @@
     --accent: 30 95% 55%; /* Bright Orange */
     --accent-foreground: 115 25% 12%; /* Darkest green for text on accent */
 
-    /* Destructive: The pink flowers from the image (or could use a deeper orange/red) */
-    --destructive: 325 75% 65%; /* Pink Flower */
+    /* Destructive: Professional red for errors/danger */
+    --destructive: 0 72% 51%; /* Professional Red */
     --destructive-foreground: 0 0% 98%; /* Light text on destructive */
 
     /* Border/Input: A slightly lighter or more desaturated version of the background teal */
