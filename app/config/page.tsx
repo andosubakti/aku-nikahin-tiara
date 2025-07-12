@@ -28,7 +28,7 @@ import {
 import { Switch } from '../../components/ui/switch'
 import { Alert, AlertTitle, AlertDescription } from '../../components/ui/alert'
 import andoContacts from '../../lib/ando-contacts.json'
-// import tiaraContacts from "../../lib/tiara-contacts.json"; // contoh jika ada file lain
+import tiaraContacts from '../../lib/tiara-contacts.json'
 import {
   Command,
   CommandInput,
@@ -82,7 +82,7 @@ export default function ConfigPage() {
   // Reference kontak dinamis
   const referenceSourceToCategory: Record<string, string> = {
     'ando-contacts': 'Ando',
-    // "tiara-contacts": "Tiara",
+    'tiara-contacts': 'Tiara',
     // dst
   }
   const allReferenceContacts = [
@@ -95,7 +95,15 @@ export default function ConfigPage() {
             source: 'ando-contacts',
           }))
       : []),
-    // ...(Array.isArray(tiaraContacts) ? tiaraContacts.map(c => ({ ... })) : []),
+    ...(Array.isArray(tiaraContacts)
+      ? tiaraContacts
+          .filter((c) => c['Display Name'] && c['Mobile Phone'])
+          .map((c) => ({
+            name: c['Display Name'],
+            wa: c['Mobile Phone'].replace(/[^\d+]/g, ''),
+            source: 'tiara-contacts',
+          }))
+      : []),
   ]
   const [showSuggestions, setShowSuggestions] = useState(false)
   const [filteredContacts, setFilteredContacts] = useState<

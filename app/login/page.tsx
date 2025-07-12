@@ -52,6 +52,12 @@ export default function LoginPage() {
               placeholder="Nama"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault()
+                  handleLogin(e)
+                }
+              }}
               autoFocus
             />
             <Input
@@ -59,6 +65,12 @@ export default function LoginPage() {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault()
+                  handleLogin(e)
+                }
+              }}
             />
             {error && (
               <Alert variant="destructive">
