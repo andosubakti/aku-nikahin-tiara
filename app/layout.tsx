@@ -60,7 +60,7 @@ export default async function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://aku-nikahin-tiara.vercel.app/og-image.jpeg"
+          content="https://aku-nikahin-tiara.vercel.app/galeri-1.webp"
         />
         <meta
           property="og:url"
