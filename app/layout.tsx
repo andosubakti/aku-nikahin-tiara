@@ -75,7 +75,7 @@ export default async function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://aku-nikahin-tiara.vercel.app/og-image.jpeg"
+          content="https://aku-nikahin-tiara.vercel.app/galeri-1.webp"
         />
       </head>
       <body className={`${inter.variable} ${lora.variable} font-sans`}>
