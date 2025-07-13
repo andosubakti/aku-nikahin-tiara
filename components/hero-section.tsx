@@ -18,12 +18,15 @@ export default function HeroSection({
   const [mounted, setMounted] = useState(false)
   const [opened, setOpened] = useState(false)
   const [name, setName] = useState('')
+  const [isFormal, setIsFormal] = useState(false)
 
   useEffect(() => {
     setMounted(true)
     const params = new URLSearchParams(window.location.search)
     const to = params.get('to')
     setName(capitalizeWords(to || ''))
+    const formal = params.get('formal')
+    setIsFormal(formal === 'true')
   }, [])
 
   const handleOpen = () => {
@@ -87,14 +90,20 @@ export default function HeroSection({
               transition={{ duration: 1, ease: 'easeInOut' }}
               className="absolute inset-0"
             >
-              <Image src="/resepsi/2.webp" fill alt="cover" />
+              {isFormal ? (
+                <Image src="/resepsi/1.webp" fill alt="cover" />
+              ) : (
+                <Image src="/resepsi/2.webp" fill alt="cover" />
+              )}
               {/* Panah Scroll */}
               <motion.button
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
                 className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
                 onClick={() => {
-                  const target = document.getElementById('maps')
+                  const target = isFormal
+                    ? document.getElementById('cover-formal')
+                    : document.getElementById('sub-cover')
                   if (target) {
                     target.scrollIntoView({ behavior: 'smooth' })
                   }
