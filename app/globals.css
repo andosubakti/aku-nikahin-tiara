@@ -8,7 +8,7 @@
 @layer base {
   :root {
     /* Background: Dominant deep teal from the image */
-    --background: 190 45% 22%; /* Deep Teal/Green */
+    --background: #104442 /* Deep Teal/Green */
     /* Foreground: Light color for text on dark backgrounds (e.g., on --background) */
     --foreground: 0 0% 98%; /* Very Light White/Off-white */
 

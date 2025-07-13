@@ -12,6 +12,7 @@ import Image from 'next/image'
 import { MapPin, ChevronDown } from 'lucide-react'
 import { motion } from 'framer-motion'
 import QRImage from '@/assets/qr-code.png'
+import RumahImage from '@/assets/rumah.webp'
 
 export default function Home() {
   const [isOpened, setIsOpened] = useState(false)
@@ -118,9 +119,25 @@ export default function Home() {
 
   return (
     <main
-      className="relative snap-y snap-mandatory overflow-scroll scroll-smooth bg-[#407771]"
+      className="relative snap-y snap-mandatory overflow-scroll scroll-smooth bg-[#104442]"
       style={{ height: '100dvh' }}
     >
+      <div className="fixed z-[50] left-0 h-[50vh] translate-y-1/2 w-full max-w-[40vw] hidden lg:block">
+        <Image
+          src={RumahImage}
+          className="object-contain"
+          fill
+          alt="cover image"
+        />
+      </div>
+      <div className="fixed z-[50] right-0 h-[50vh] translate-y-1/2 w-full max-w-[40vw] hidden lg:block">
+        <Image
+          src={RumahImage}
+          className="object-contain"
+          fill
+          alt="cover image"
+        />
+      </div>
       <HeroSection setIsOpened={setIsOpened} />
       {/* Background music logic */}
       {isFormal ? (
@@ -129,9 +146,9 @@ export default function Home() {
             isActive={isOpened && !isTimelineVisible}
             playlist={[
               {
-                title: 'Kebo Giro',
-                src: '/kebo_giro.mp3',
-                cover: '/kebo_giro.mp3', // You can use a cover image if available
+                title: 'ibu pertiwi',
+                src: '/ibu-pertiwi.mpeg',
+                cover: '/', // You can use a cover image if available
               },
             ]}
             hideFloatingDisk={true}
@@ -179,7 +196,7 @@ export default function Home() {
         <>
           <section
             id="maps"
-            className="w-screen bg-[url(/panggih.webp)] relative snap-center snap-always flex flex-col"
+            className="w-screen max-w-[480px] m-auto bg-[#104442] relative snap-center snap-always flex flex-col"
             style={{
               height: '100dvh',
               backgroundPosition: 'center',
@@ -187,46 +204,71 @@ export default function Home() {
             }}
           >
             {/* Kontainer utama */}
-            <div className="backdrop-blur-sm bg-[#1c514f]/50 max-w-[480px] md:m-auto rounded-2xl p-6 shadow-lg border border-white/30 flex flex-col gap-4 text-lg m-6">
-              <p className="text-base">Insya Allah akan dilaksanakan pada</p>
-              <p className="font-semibold">
-                Sabtu, 02 Agustus 2025 <br /> Pukul 11.00 - 13.00 WIB
-              </p>
+            <Image src="/resepsi/3.webp" fill alt="cover" />
 
-              <div className="leading-relaxed font-semibold">
-                <p>Gedung Manunggal Dislaikad</p>
-                <p>Jl. Manunggal Raya Cibubur</p>
-                <p>Ciracas - Jakarta Timur</p>
+            {/* Panah Scroll */}
+            <motion.button
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
+              onClick={() => {
+                const target = document.getElementById('4')
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+            >
+              {/* Icon bulat */}
+              <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
+                <ChevronDown className="w-6 h-6 text-[#335A4A]" />
               </div>
 
-              <div className="flex flex-col gap-2 items-center justify-center">
-                <Image
+              {/* Label teks */}
+              <span
+                className="text-base font-semibold text-[#335A4A] tracking-wide"
+                style={{
+                  textShadow: `
+                  -1px -1px 0 #fff,
+                  1px -1px 0 #fff,
+                  -1px 1px 0 #fff,
+                  1px 1px 0 #fff
+                `,
+                }}
+              >
+                Waktu dan Lokasi Acara
+              </span>
+            </motion.button>
+          </section>
+
+          <section
+            id="4"
+            className="w-screen max-w-[480px] m-auto bg-[#104442] relative snap-center snap-always flex flex-col"
+            style={{
+              height: '100dvh',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+            }}
+          >
+            {/* Kontainer utama */}
+            <Image src="/resepsi/4.webp" fill alt="cover" />
+
+            <div className="flex flex-col gap-2 items-center justify-center">
+              {/* <Image
                   width={100}
                   height={100}
                   alt="qr code"
                   src={QRImage}
                   className="rounded-xl"
-                />
-                <a
-                  href="https://maps.app.goo.gl/BdxhQB7f5rsYY6H88"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition text-xs max-w-md w-fit shadow-lg bg-black overflow-hidden"
-                >
-                  <MapPin className="w-5 h-5" />
-                  Lihat di Google Maps
-                </a>
-              </div>
-
-              <p className="leading-relaxed italic text-base font-semibold">
-                Merupakan kehormatan dan kebahagiaan bagi kami, apabila
-                Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa &
-                restunya, terima kasih.
-              </p>
-              <p className="text-sm text-center italic font-bold">
-                (Kel. Bpk. Jatmiko Bowo Leksono) <br /> & <br /> (Kel. Bpk.
-                Slamet Romadhoni)
-              </p>
+                /> */}
+              <a
+                href="https://maps.app.goo.gl/BdxhQB7f5rsYY6H88"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-[30%] inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition text-xs max-w-md w-fit shadow-lg bg-black overflow-hidden"
+              >
+                <MapPin className="w-5 h-5" />
+                Lihat di Google Maps
+              </a>
             </div>
 
             {/* Panah Scroll */}
@@ -247,102 +289,119 @@ export default function Home() {
               </div>
 
               {/* Label teks */}
-              <span
-                className="text-base font-semibold text-[#335A4A] tracking-wide"
-                style={{
-                  textShadow: `
+              {!isFormal && (
+                <span
+                  className="text-base font-semibold text-[#335A4A] tracking-wide"
+                  style={{
+                    textShadow: `
                   -1px -1px 0 #fff,
                   1px -1px 0 #fff,
                   -1px 1px 0 #fff,
                   1px 1px 0 #fff
                 `,
-                }}
-              >
-                Akad Nikah
-              </span>
+                  }}
+                >
+                  Akad Nikah
+                </span>
+              )}
             </motion.button>
           </section>
 
           <section
             ref={timelineRef}
             id="timeline"
-            className="w-screen relative snap-center snap-always flex flex-col items-center justify-center bg-black"
+            className={`w-screen max-w-[480px] ${
+              !isFormal ? 'md:max-w-full' : ''
+            } m-auto relative snap-center snap-always flex flex-col items-center justify-center bg-[#104442]`}
             style={{ height: '100dvh' }}
           >
-            <div className="absolute inset-0 w-full h-full flex flex-col">
-              <video
-                ref={videoRef}
-                src="https://think-like-a-shortcut.work/Copy%20of%20Tiara%26Ando.mp4"
-                className="w-full max-h-[45vh] md:max-h-[100vh] object-contain flex-shrink-0"
-                controls
-                loop
-                playsInline
+            {isFormal ? (
+              <Image
+                src="/resepsi/5.webp"
+                fill
+                alt="cover"
+                className="object-cover"
               />
-              <div className="video-panel flex-1 min-h-0 flex flex-col md:hidden">
-                <div className="m-2 p-2 flex flex-col gap-1">
-                  <h2 className="text-lg text-white">Pelaksanaan Akad Nikah</h2>
-                  <p className="text-sm text-gray-400">
-                    Selasa Wage, 22 April 2025
-                  </p>
-                </div>
-                <div className="photo-galery grid grid-cols-2 gap-2 flex-1 overflow-y-auto pb-4 px-4">
-                  {/* grid photo */}
-                  {timelineImages.map((src, idx) => (
-                    <div
-                      key={idx}
-                      className="relative h-full overflow-hidden rounded-lg m-auto shadow-md cursor-pointer"
-                      onClick={() => handleImageClick(idx)}
-                    >
-                      <img
-                        src={src}
-                        alt={`Galeri foto ${idx + 1}`}
-                        className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                    </div>
-                  ))}
+            ) : (
+              <div className="absolute inset-0 w-full h-full flex flex-col">
+                <video
+                  ref={videoRef}
+                  src="https://think-like-a-shortcut.work/Copy%20of%20Tiara%26Ando.mp4"
+                  className="w-full max-h-[45vh] md:max-h-[100vh] object-contain flex-shrink-0 z-[60]"
+                  controls
+                  loop
+                  playsInline
+                />
+                <div className="video-panel flex-1 min-h-0 flex flex-col md:hidden">
+                  <div className="m-2 p-2 flex flex-col gap-1">
+                    <h2 className="text-lg text-white">
+                      Pelaksanaan Akad Nikah
+                    </h2>
+                    <p className="text-sm text-gray-400">
+                      Selasa Wage, 22 April 2025
+                    </p>
+                  </div>
+                  <div className="photo-galery grid grid-cols-2 gap-2 flex-1 overflow-y-auto pb-4 px-4">
+                    {/* grid photo */}
+                    {timelineImages.map((src, idx) => (
+                      <div
+                        key={idx}
+                        className="relative h-full overflow-hidden rounded-lg m-auto shadow-md cursor-pointer"
+                        onClick={() => handleImageClick(idx)}
+                      >
+                        <img
+                          src={src}
+                          alt={`Galeri foto ${idx + 1}`}
+                          className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
             {/* Panah Scroll */}
-            <motion.button
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="absolute bottom-6 w-fit flex flex-col items-center z-30 cursor-pointer focus:outline-none"
-              onClick={() => {
-                const target = document.getElementById('gallery')
-                if (target) {
-                  target.scrollIntoView({ behavior: 'smooth' })
-                }
-              }}
-            >
-              {/* Icon bulat */}
-              <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
-                <ChevronDown className="w-6 h-6 text-[#335A4A]" />
-              </div>
+            {!isFormal && (
+              <motion.button
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="absolute bottom-6 w-fit flex flex-col items-center z-30 cursor-pointer focus:outline-none"
+                onClick={() => {
+                  const target = document.getElementById('gallery')
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+              >
+                {/* Icon bulat */}
+                <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
+                  <ChevronDown className="w-6 h-6 text-[#335A4A]" />
+                </div>
 
-              {/* Label teks */}
-              <span
-                className="text-base font-semibold text-[#335A4A] tracking-wide"
-                style={{
-                  textShadow: `
+                {/* Label teks */}
+                <span
+                  className="text-base font-semibold text-[#335A4A] tracking-wide"
+                  style={{
+                    textShadow: `
                   -1px -1px 0 #fff,
                   1px -1px 0 #fff,
                   -1px 1px 0 #fff,
                   1px 1px 0 #fff
                 `,
-                }}
-              >
-                Our Journey
-              </span>
-            </motion.button>
+                  }}
+                >
+                  Our Journey
+                </span>
+              </motion.button>
+            )}
           </section>
 
           {!isFormal && (
             <section
               id="gallery"
-              className="w-screen max-w-[480px] m-auto relative snap-center snap-always"
+              className="w-screen max-w-[480px] m-auto max-w-[480px] m-auto relative snap-center snap-always"
               style={{ height: '100dvh' }}
             >
               <div className="absolute top-[24px] z-[9] w-full">
@@ -394,7 +453,7 @@ export default function Home() {
           {!isFormal && (
             <section
               id="end"
-              className="w-screen max-w-[480px] m-auto relative snap-center snap-always flex flex-col justify-center items-center px-4 pt-16"
+              className="w-screen max-w-[480px] m-auto max-w-[480px] m-auto relative snap-center snap-always flex flex-col justify-center items-center px-4 pt-16"
               style={{ height: '100dvh' }}
             >
               <h2 className="text-center font-serif text-lg italic font-medium text-[#335A4A] absolute top-5 z-[9]">
@@ -484,8 +543,22 @@ export default function Home() {
               />
             </section>
           )}
+
+          <section
+            id="4"
+            className="w-screen max-w-[480px] m-auto bg-[#104442] relative snap-center snap-always flex flex-col"
+            style={{
+              height: '100dvh',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+            }}
+          >
+            {/* Kontainer utama */}
+            <Image src="/resepsi/6.webp" fill alt="cover" />
+          </section>
         </>
       )}
+
       {isImageViewerOpen && (
         <ImageViewer
           images={timelineImages}

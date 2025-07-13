@@ -34,7 +34,7 @@ export default function HeroSection({
   if (!mounted)
     return (
       <div
-        className="flex w-screen items-center justify-center bg-gradient-to-b bg-[#407771]"
+        className="flex w-screen items-center justify-center bg-[#104442]"
         style={{ height: '100dvh' }}
       >
         <motion.div
@@ -47,22 +47,6 @@ export default function HeroSection({
 
   return (
     <>
-      <div className="absolute left-0 h-[50vh] translate-y-1/2 w-full max-w-[40vw] hidden lg:block">
-        <Image
-          src={RumahImage}
-          className="object-contain"
-          fill
-          alt="cover image"
-        />
-      </div>
-      <div className="absolute right-0 h-[50vh] translate-y-1/2 w-full max-w-[40vw] hidden lg:block">
-        <Image
-          src={RumahImage}
-          className="object-contain"
-          fill
-          alt="cover image"
-        />
-      </div>
       <section
         className="relative w-screen max-w-[480px] m-auto overflow-hidden snap-center snap-always"
         style={{ height: '100dvh' }}
@@ -79,37 +63,7 @@ export default function HeroSection({
               <div className="absolute top-[50px] left-1/2 -translate-x-1/2 -translate-y-1/2 z-[9] font-bold p-2 text-center max-w-[80%] w-full">
                 {name ? `Yth. ${name}` : ''}
               </div>
-              {/* <Image
-              src={CoverImage}
-              className="object-cover"
-              fill
-              alt="cover-img"
-            /> */}
-              <div className="flex flex-col gap-24 md:gap-8 py-[100px] items-center min-h-screen p-5 text-center">
-                <div className="header">
-                  <h1 className="text-3xl md:text-5xl tracking-widest mb-4 font-bold">
-                    U N D A N G A N
-                  </h1>
-                  <p className="text-lg md:text-xl lg:text-2xl mb-2">
-                    Resepsi Pernikahan Tiara - Ando
-                  </p>
-                  <p className="text-lg md:text-xl lg:text-2xl">
-                    Sabtu, 02 Agustus 2025
-                  </p>
-                </div>
-                <div className="relative w-full h-full min-h-[25vh] md:min-h-[35vh]">
-                  <Image
-                    src={CoverImage}
-                    className="object-cover"
-                    fill
-                    alt="cover image"
-                  />
-                </div>
-              </div>
-              <div className="absolute m-auto text-center w-full bottom-32 quote text-base md:text-lg lg:text-xl italic max-w-2xl leading-relaxed">
-                <p>True love doesn't end at death,</p>
-                <p>if Allah wills it, it will continue in Jannah</p>
-              </div>
+              <Image src="/resepsi/1.webp" fill alt="cover" />
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
@@ -133,43 +87,7 @@ export default function HeroSection({
               transition={{ duration: 1, ease: 'easeInOut' }}
               className="absolute inset-0"
             >
-              <div
-                style={{
-                  backgroundSize: '100%',
-                  backgroundPositionY: 'bottom',
-                }}
-                className="flex bg-[url(/tema.webp)] md:bg-none bg-[#1c514f] md:bg-transparent bg-no-repeat text-lg flex-col md:justify-center gap-6 h-screen p-5 font-[family-name:Playfair_Display]"
-              >
-                <div className="flex flex-col md:text-center md:items-center gap-2">
-                  <div className="text-xl mb-4">
-                    بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
-                  </div>
-                  <p className="">
-                    Assalamu'alaikum Warahmatullahi Wabarakatuh
-                  </p>
-                  <p className="leading-relaxed">
-                    Dengan kerendahan hati kami berniat mengundang
-                    Bapak/Ibu/Saudara/i menghadiri resepsi pernikahan
-                    putra/putri kami
-                  </p>
-                </div>
-                <div className="flex flex-col md:text-center md:items-center gap-2">
-                  <h1 className="text-xl font-bold leading-tight">
-                    Tiara Ayu Wulanjani S.IP
-                  </h1>
-                  <p className="text-sm italic">
-                    Putri ketiga Bpk. Jatmiko Bowo Leksono & Ibu Hesti Wulanjani
-                  </p>
-                  <p className="font-medium text-lg py-2">Dengan</p>
-                  <h1 className="text-xl font-bold leading-tight">
-                    Ando Subakti S.T
-                  </h1>
-                  <p className="text-sm italic">
-                    Putra kedua Bpk. Slamet Romadhoni & Ibu Sri Rahayu
-                    Susanawati
-                  </p>
-                </div>
-              </div>
+              <Image src="/resepsi/2.webp" fill alt="cover" />
               {/* Panah Scroll */}
               <motion.button
                 animate={{ y: [0, -10, 0] }}
