@@ -364,7 +364,12 @@ export default function Home() {
             style={{ height: '100dvh' }}
           >
             {isFormal ? (
-              <Image src="/resepsi/5.webp" fill alt="cover" />
+              <Image
+                src="/resepsi/5.webp"
+                fill
+                alt="cover"
+                className="object-contain"
+              />
             ) : (
               <div className="absolute inset-0 w-full h-full flex flex-col">
                 <video
