@@ -51,7 +51,7 @@ export default function HeroSection({
   return (
     <>
       <section
-        className="relative w-screen max-w-[480px] m-auto overflow-hidden snap-center snap-always"
+        className="relative w-screen max-w-[480px] m-auto overflow-hidden snap-center snap-always bg-[#104442]"
         style={{ height: '100dvh' }}
       >
         <AnimatePresence>
@@ -66,7 +66,12 @@ export default function HeroSection({
               <div className="absolute top-[50px] left-1/2 -translate-x-1/2 -translate-y-1/2 z-[9] font-bold p-2 text-center max-w-[80%] w-full">
                 {name ? `Yth. ${name}` : ''}
               </div>
-              <Image src="/resepsi/1.webp" fill alt="cover" />
+              <Image
+                src="/resepsi/1.webp"
+                fill
+                alt="cover"
+                className="object-contain"
+              />
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
@@ -91,9 +96,19 @@ export default function HeroSection({
               className="absolute inset-0"
             >
               {isFormal ? (
-                <Image src="/resepsi/1.webp" fill alt="cover" />
+                <Image
+                  src="/resepsi/1.webp"
+                  fill
+                  alt="cover"
+                  className="object-contain"
+                />
               ) : (
-                <Image src="/resepsi/2.webp" fill alt="cover" />
+                <Image
+                  src="/resepsi/2.webp"
+                  fill
+                  alt="cover"
+                  className="object-contain"
+                />
               )}
               {/* Panah Scroll */}
               <motion.button
@@ -101,9 +116,7 @@ export default function HeroSection({
                 transition={{ duration: 1.5, repeat: Infinity }}
                 className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
                 onClick={() => {
-                  const target = isFormal
-                    ? document.getElementById('cover-formal')
-                    : document.getElementById('sub-cover')
+                  const target = document.getElementById('sub-cover')
                   if (target) {
                     target.scrollIntoView({ behavior: 'smooth' })
                   }

@@ -51,6 +51,7 @@
 body {
   color: #c5f3da !important;
   font-family: "Montserrat", sans-serif !important;
+  background: #104442;
 }
 
 @layer base {

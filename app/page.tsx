@@ -194,54 +194,6 @@ export default function Home() {
 
       {isOpened && (
         <>
-          {isFormal && (
-            <section
-              id="cover-formal"
-              className="w-screen max-w-[480px] m-auto bg-[#104442] relative snap-center snap-always flex flex-col"
-              style={{
-                height: '100dvh',
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-              }}
-            >
-              {/* Kontainer utama */}
-              <Image src="/resepsi/2.webp" fill alt="cover" />
-
-              {/* Panah Scroll */}
-              <motion.button
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
-                onClick={() => {
-                  const target = document.getElementById('sub-cover')
-                  if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' })
-                  }
-                }}
-              >
-                {/* Icon bulat */}
-                <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
-                  <ChevronDown className="w-6 h-6 text-[#335A4A]" />
-                </div>
-
-                {/* Label teks */}
-                <span
-                  className="text-base font-semibold text-[#335A4A] tracking-wide"
-                  style={{
-                    textShadow: `
-                  -1px -1px 0 #fff,
-                  1px -1px 0 #fff,
-                  -1px 1px 0 #fff,
-                  1px 1px 0 #fff
-                `,
-                  }}
-                >
-                  Waktu dan Lokasi Acara
-                </span>
-              </motion.button>
-            </section>
-          )}
-
           <section
             id="sub-cover"
             className="w-screen max-w-[480px] m-auto bg-[#104442] relative snap-center snap-always flex flex-col"
@@ -252,7 +204,12 @@ export default function Home() {
             }}
           >
             {/* Kontainer utama */}
-            <Image src="/resepsi/3.webp" fill alt="cover" />
+            <Image
+              src="/resepsi/3.webp"
+              fill
+              alt="cover"
+              className="object-contain"
+            />
 
             {/* Panah Scroll */}
             <motion.button
@@ -298,7 +255,12 @@ export default function Home() {
             }}
           >
             {/* Kontainer utama */}
-            <Image src="/resepsi/4.webp" fill alt="cover" />
+            <Image
+              src="/resepsi/4.webp"
+              fill
+              alt="cover"
+              className="object-contain"
+            />
 
             <div className="flex flex-col gap-2 items-center justify-center">
               {/* <Image
@@ -325,7 +287,9 @@ export default function Home() {
               transition={{ duration: 1.5, repeat: Infinity }}
               className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
               onClick={() => {
-                const target = document.getElementById('timeline')
+                const target = isFormal
+                  ? document.getElementById('quote-formal')
+                  : document.getElementById('timeline')
                 if (target) {
                   target.scrollIntoView({ behavior: 'smooth' })
                 }
@@ -354,6 +318,63 @@ export default function Home() {
               )}
             </motion.button>
           </section>
+
+          {isFormal && (
+            <>
+              <section
+                id="quote-formal"
+                className="w-screen max-w-[480px] m-auto bg-[#104442] relative snap-center snap-always flex flex-col"
+                style={{
+                  height: '100dvh',
+                  backgroundPosition: 'center',
+                  backgroundSize: 'cover',
+                }}
+              >
+                {/* Kontainer utama */}
+                <Image
+                  src="/resepsi/2.webp"
+                  fill
+                  alt="cover"
+                  className="object-contain"
+                />
+
+                {/* Panah Scroll */}
+                <motion.button
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                  className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
+                  onClick={() => {
+                    const target = document.getElementById('timeline')
+                    if (target) {
+                      target.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                >
+                  {/* Icon bulat */}
+                  <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
+                    <ChevronDown className="w-6 h-6 text-[#335A4A]" />
+                  </div>
+
+                  {/* Label teks */}
+                  {!isFormal && (
+                    <span
+                      className="text-base font-semibold text-[#335A4A] tracking-wide"
+                      style={{
+                        textShadow: `
+                  -1px -1px 0 #fff,
+                  1px -1px 0 #fff,
+                  -1px 1px 0 #fff,
+                  1px 1px 0 #fff
+                `,
+                      }}
+                    >
+                      Akad Nikah
+                    </span>
+                  )}
+                </motion.button>
+              </section>
+            </>
+          )}
 
           <section
             ref={timelineRef}
@@ -501,7 +522,7 @@ export default function Home() {
           {!isFormal && (
             <section
               id="end"
-              className="w-screen max-w-[480px] m-auto max-w-[480px] m-auto relative snap-center snap-always flex flex-col justify-center items-center px-4 pt-16"
+              className="w-screen max-w-[480px] m-auto relative snap-center snap-always flex flex-col justify-center items-center px-4 pt-16"
               style={{ height: '100dvh' }}
             >
               <h2 className="text-center font-serif text-lg italic font-medium text-[#335A4A] absolute top-5 z-[9]">
@@ -602,7 +623,12 @@ export default function Home() {
             }}
           >
             {/* Kontainer utama */}
-            <Image src="/resepsi/6.webp" fill alt="cover" />
+            <Image
+              src="/resepsi/6.webp"
+              fill
+              alt="cover"
+              className="object-contain"
+            />
           </section>
         </>
       )}
