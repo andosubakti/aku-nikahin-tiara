@@ -287,9 +287,60 @@ export default function Home() {
               transition={{ duration: 1.5, repeat: Infinity }}
               className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
               onClick={() => {
-                const target = isFormal
-                  ? document.getElementById('quote-formal')
-                  : document.getElementById('timeline')
+                const target = document.getElementById('quote-formal')
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth' })
+                }
+              }}
+            >
+              {/* Icon bulat */}
+              <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
+                <ChevronDown className="w-6 h-6 text-[#335A4A]" />
+              </div>
+
+              {/* Label teks */}
+              {/* {!isFormal && (
+                <span
+                  className="text-base font-semibold text-[#335A4A] tracking-wide"
+                  style={{
+                    textShadow: `
+                  -1px -1px 0 #fff,
+                  1px -1px 0 #fff,
+                  -1px 1px 0 #fff,
+                  1px 1px 0 #fff
+                `,
+                  }}
+                >
+                  Akad Nikah
+                </span>
+              )} */}
+            </motion.button>
+          </section>
+
+          <section
+            id="quote-formal"
+            className="w-screen max-w-[480px] m-auto bg-[#104442] relative snap-center snap-always flex flex-col"
+            style={{
+              height: '100dvh',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+            }}
+          >
+            {/* Kontainer utama */}
+            <Image
+              src="/resepsi/2.webp"
+              fill
+              alt="cover"
+              className="object-contain"
+            />
+
+            {/* Panah Scroll */}
+            <motion.button
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
+              onClick={() => {
+                const target = document.getElementById('timeline')
                 if (target) {
                   target.scrollIntoView({ behavior: 'smooth' })
                 }
@@ -318,63 +369,6 @@ export default function Home() {
               )}
             </motion.button>
           </section>
-
-          {isFormal && (
-            <>
-              <section
-                id="quote-formal"
-                className="w-screen max-w-[480px] m-auto bg-[#104442] relative snap-center snap-always flex flex-col"
-                style={{
-                  height: '100dvh',
-                  backgroundPosition: 'center',
-                  backgroundSize: 'cover',
-                }}
-              >
-                {/* Kontainer utama */}
-                <Image
-                  src="/resepsi/2.webp"
-                  fill
-                  alt="cover"
-                  className="object-contain"
-                />
-
-                {/* Panah Scroll */}
-                <motion.button
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                  className="absolute bottom-6 w-full flex flex-col items-center z-30 cursor-pointer focus:outline-none"
-                  onClick={() => {
-                    const target = document.getElementById('timeline')
-                    if (target) {
-                      target.scrollIntoView({ behavior: 'smooth' })
-                    }
-                  }}
-                >
-                  {/* Icon bulat */}
-                  <div className="bg-white/80 backdrop-blur-md shadow-lg rounded-full p-2 mb-2">
-                    <ChevronDown className="w-6 h-6 text-[#335A4A]" />
-                  </div>
-
-                  {/* Label teks */}
-                  {!isFormal && (
-                    <span
-                      className="text-base font-semibold text-[#335A4A] tracking-wide"
-                      style={{
-                        textShadow: `
-                  -1px -1px 0 #fff,
-                  1px -1px 0 #fff,
-                  -1px 1px 0 #fff,
-                  1px 1px 0 #fff
-                `,
-                      }}
-                    >
-                      Akad Nikah
-                    </span>
-                  )}
-                </motion.button>
-              </section>
-            </>
-          )}
 
           <section
             ref={timelineRef}

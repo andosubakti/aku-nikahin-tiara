@@ -95,21 +95,12 @@ export default function HeroSection({
               transition={{ duration: 1, ease: 'easeInOut' }}
               className="absolute inset-0"
             >
-              {isFormal ? (
-                <Image
-                  src="/resepsi/1.webp"
-                  fill
-                  alt="cover"
-                  className="object-contain"
-                />
-              ) : (
-                <Image
-                  src="/resepsi/2.webp"
-                  fill
-                  alt="cover"
-                  className="object-contain"
-                />
-              )}
+              <Image
+                src="/resepsi/7.webp"
+                fill
+                alt="cover"
+                className="object-contain"
+              />
               {/* Panah Scroll */}
               <motion.button
                 animate={{ y: [0, -10, 0] }}
